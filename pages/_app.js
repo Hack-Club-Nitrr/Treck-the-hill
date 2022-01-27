@@ -1,14 +1,7 @@
-//Navbar
-import Navbar from "../components/Navbar.js";
-
-import "../styles/globals.css";
-
+import '../styles/globals.css';
+import '../styles/timeline.css';
 function MyApp({ Component, pageProps }) {
-  return (
-    <Navbar>
-      <Component {...pageProps} />
-    </Navbar>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
