@@ -8,15 +8,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.6.3",
-    "@emotion/react": "^11",
-    "@emotion/styled": "^11",
-    "framer-motion": "^4",
     "next": "12.0.8",
     "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "next-share": "^0.13.0",
-    "react-icons": "^4.2.0"
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
     "eslint": "8.7.0",
