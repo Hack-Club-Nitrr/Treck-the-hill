@@ -1,50 +1,50 @@
 .container {
-  padding: 0 2rem;
+  background-color: #000000e1;
+  position: absolute;
+  overflow: hidden;
+  width: 100vw;
+  height: 300vh;
 }
-
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+.banner {
+  z-index: 2;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 33.5%;
+}
+.stars {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  opacity: 0;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.mountLef {
+  z-index: 1;
+  position: fixed;
+  bottom: 0px;
+  left: 0%;
+  transform: translateX(-600px);
 }
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-  text-align: center;
+.mountRig {
+  z-index: 1;
+  position: fixed;
+  bottom: 0px;
+  right: 0%;
+  transform: translateX(600px);
 }
-
-/* socaial media embed in website --- Alim Khan */
-.body{
-
-  box-sizing: border-box;
-  margin-top: 0px;
-  background: rgb(50, 75, 255);
-  height: 100vh;
-  padding: 40px 0px;
-  
+.camp {
+  z-index: 2;
+  position: fixed;
+  right: 0%;
+  bottom: 0px;
+  transform: translateX(600px);
 }
-.slider{
-  margin: auto auto;
-  padding: 34px 0px;
-  width: 50%;
-  
-	border: 2px solid rgba(255, 255, 255, 0.2);
-	background: rgba(255, 255, 255, 0.2);
-	box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
-	backdrop-filter: blur(30px);
-
+.mount {
+  z-index: 1;
+  position: fixed;
+  bottom: 0px;
+  left: 0%;
 }
-
-

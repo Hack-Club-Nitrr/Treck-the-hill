@@ -8,7 +8,9 @@ import "../styles/globals.css";
 function MyApp({Component, pageProps}) {
   return (
     <ChakraProvider>
+      <Navbar>
       <Component {...pageProps} />
+      </Navbar>
     </ChakraProvider>
   );
 }
