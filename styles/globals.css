@@ -15,3 +15,12 @@ a {
   margin: 0;
   box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}

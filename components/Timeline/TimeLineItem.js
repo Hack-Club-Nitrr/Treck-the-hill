@@ -4,17 +4,17 @@ import NumberBar from './NumberBar';
 const TimeLineItem = ({ data, id }) => {
   return (
     <div className="timeline-item">
-      <div className="timeline-content">
+      <div className="timeline-content" style={{ borderColor: data.color }}>
         <NumberBar id={id} color={data.color} />
         <h1 className="timeline-heading">
           <div style={{ backgroundColor: data.color }}></div>
           <p>{data.month}</p>
         </h1>
 
-        <h2 className="timeline-topic" style={{ color: data.color }}>
+        <p className="timeline-topic" style={{ color: data.color }}>
           {data.topic}
-        </h2>
-        <p>{data.content}</p>
+        </p>
+        <p className="timeline-para">{data.content}</p>
       </div>
     </div>
   );

@@ -2,10 +2,16 @@
   min-height: 100vh;
   padding: 4rem;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+.container {
+  background-color: #000000e1;
+  position: absolute;
+  overflow: hidden;
+  width: 100vw;
+  height: 300vh;
+}
+.banner {
+  z-index: 2;
 }
 
 .title a:hover,
@@ -13,10 +19,38 @@ q .title a:focus,
 .title a:active {
   text-decoration: underline;
 }
+.stars {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  opacity: 0;
+}
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-  text-align: center;
+.mountLef {
+  z-index: 1;
+  position: fixed;
+  bottom: 0px;
+  left: 0%;
+  transform: translateX(-600px);
+}
+.mountRig {
+  z-index: 1;
+  position: fixed;
+  bottom: 0px;
+  right: 0%;
+  transform: translateX(600px);
+}
+.camp {
+  z-index: 2;
+  position: fixed;
+  right: 0%;
+  bottom: 0px;
+  transform: translateX(600px);
+}
+.mount {
+  z-index: 1;
+  position: fixed;
+  bottom: 0px;
+  left: 0%;
 }
