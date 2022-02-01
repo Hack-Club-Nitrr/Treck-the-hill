@@ -1,0 +1,135 @@
+/* Number Bar */
+.numberbar {
+  width: 100%;
+  align-items: center;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  min-height: 60px;
+}
+
+.timeline-item:nth-child(odd) .numberbar {
+  flex-direction: row-reverse;
+}
+
+.numberbar-id {
+  border-width: 5px;
+  border-style: solid;
+  background-color: #000;
+  position: relative;
+  border-radius: 50%;
+  min-width: 60px;
+  min-height: 60px;
+}
+
+.numberbar-id h1 {
+  font-size: clamp(10px, 3.5vh, 25px);
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.numberbar-line {
+  flex-grow: 1;
+  min-height: 5px;
+  background: #000;
+}
+
+.numberbar-circle {
+  border-radius: 50%;
+  width: 20px;
+  min-height: 20px;
+}
+
+/* Timeline right and left border */
+.timeline-item:nth-child(odd) .timeline-content {
+  border-left-width: 5px;
+  border-left-style: solid;
+}
+.timeline-item:nth-child(even) .timeline-content {
+  border-right-width: 5px;
+  border-right-style: solid;
+}
+/* Timeline Page */
+.timeline-page {
+  min-height: 100vh;
+}
+
+/* Timeline container */
+.timeline-container {
+  margin: 50px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* styling changing based on odd even */
+.timeline-item:nth-child(odd) {
+  align-self: flex-end;
+  text-align: left;
+}
+.timeline-item:nth-child(even) {
+  text-align: right;
+}
+
+.timeline-item:nth-child(odd) h1 {
+  flex-direction: row;
+}
+
+.timeline-item:nth-child(even) .timeline-heading {
+  align-self: flex-end;
+}
+
+/* Timline Each Item */
+.timeline-item {
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+  width: 50%;
+}
+
+.timeline-content {
+  padding: 30px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  row-gap: clamp(10px, 4vh, 20px);
+}
+
+.timeline-heading {
+  font-size: 20px;
+  width: 35%;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.timeline-heading p {
+  font-size: clamp(10px, 4vh, 30px);
+  padding: 5px;
+  letter-spacing: 1.5px;
+  margin: 0 10px 0 0;
+}
+
+.timeline-heading > div {
+  flex-basis: 20%;
+}
+
+.timeline-topic {
+  font-size: clamp(7px, 4vh, 25px);
+}
+
+.timeline-para {
+  font-size: clamp(7px, 3.8vh, 20px);
+}
+
+.main-heading {
+  font-size: clamp(15px, 7vh, 45px);
+}

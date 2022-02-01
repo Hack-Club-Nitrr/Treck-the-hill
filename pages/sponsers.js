@@ -1,3 +1,4 @@
+
 import sponsor1 from '../public/mmc.png';
 import sponsor2 from '../public/binance.png';
 import sponsor3 from '../public/mmc.png';
@@ -32,7 +33,7 @@ const Sponser = (props) => {
 
     </div>
   );
-};
+
 
 
 

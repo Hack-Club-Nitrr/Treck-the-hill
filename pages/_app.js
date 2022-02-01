@@ -1,14 +1,29 @@
+import '../styles/globals.css';
+import '../styles/timeline.css';
 //Navbar
+
 import Navbar from "../components/Navbar.js";
 import Sponsers from "./sponsers.js";
 
-import "../styles/globals.css";
+
+import { ChakraProvider } from '@chakra-ui/react';
+
 
 
 function MyApp({ Component, pageProps }) {
   return (
 
-    <Sponsers/>
+
+    
+
+    <ChakraProvider>
+      {/* <Navbar> */}
+     
+      <Component {...pageProps} />
+      {/* </Navbar> */}
+      {/* <Sponsors/> */}
+    </ChakraProvider>
+
   );
 }
 
