@@ -1,6 +1,5 @@
 import React from 'react';
 import { SimpleGrid, Box } from '@chakra-ui/react';
-import Image from 'next/Image';
 
 export const About = () => {
   return (
