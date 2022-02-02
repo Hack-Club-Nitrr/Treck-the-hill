@@ -58,16 +58,10 @@ export const About = () => {
             padding: 20px 40px;
             z-index: 10000000000000;
           }
-          .content {
-            width: 100%;
-            max-width: 1300px;
-            color: white;
-            font-family: 'Comfortaa', cursive;
-          }
 
           .content {
             width: 100%;
-            max-width: 700px;
+            max-width: 1300px;
             color: white;
             font-family: 'Comfortaa', cursive;
             backdrop-filter: blur(12px);
