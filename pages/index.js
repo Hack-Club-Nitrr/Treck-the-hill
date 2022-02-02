@@ -33,6 +33,7 @@ export default function Home() {
   const tree2Ref = useRef(null);
   const tree3Ref = useRef(null);
   const baseRef = useRef(null);
+  const campRef = useRef(null);
   // const starsRef = useRef(null);
   const mountRef = useRef(null);
   // const campRef = useRef(null);
@@ -64,6 +65,13 @@ export default function Home() {
       }px)`;
     }
     if (scrollPosition < 700) {
+      campRef.current.style.opacity = '1';
+      campRef.current.style.transform = `scale(1)`;
+    } else {
+      campRef.current.style.opacity = `${1 - scrollPosition / 1000}`;
+      campRef.current.style.transform = `scale(${1 + scrollPosition / 1000})`;
+    }
+    if (scrollPosition < 700) {
       tree3Ref.current.style.opacity = '1';
       tree3Ref.current.style.transform = `scale(1.5)`;
     } else {
@@ -73,6 +81,13 @@ export default function Home() {
       }) translate(${-350 + 0.5 * scrollPosition}px,${
         -280 + 0.4 * scrollPosition
       }px)`;
+    }
+    if (scrollPosition < 1100) {
+      baseRef.current.style.opacity = '1';
+      // baseRef.current.style.transform = `scale(1.5)`;
+    } else {
+      baseRef.current.style.opacity = `${2 - scrollPosition / 1100}`;
+      baseRef.current.style.transform = `scale(${2 + scrollPosition / 1100})`;
     }
     if (scrollPosition < 500) {
       // mountRef.current.style.opacity = '1';
@@ -372,16 +387,18 @@ export default function Home() {
         <use x="480" y="-20" href="#tree" />
         <use x="440" y="-15" href="#tree" transform="scale(1.2)" />
       </svg>
-      {/* <div className={styles.camp}>
+      <div className={styles.camp} ref={campRef}>
         <Image
           src="/camp.png"
           alt="camp"
           width={0.3 * width}
           height={0.3 * height}
         />
-      </div> */}
-      <div style={{ height: '250vh' }}></div>
+      </div>
+      <div style={{ height: '300vh' }}></div>
+
       <About />
+
       <style jsx>
         {`
           .background {
