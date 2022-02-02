@@ -10,15 +10,19 @@ const timeline = () => {
       <div className="timeline-container">
         <h1 className="main-heading">Event Timeline</h1>
         {timeLineData.map((data, index) => {
-          index % 2 == 0 ? (
-            <Fade>
-              <TimeLineItem key={index} data={data} id={index} />
-            </Fade>
-          ) : (
-            <Fade>
-              <TimeLineItem key={index} data={data} id={index} />
-            </Fade>
-          );
+          if (index % 2 === 0) {
+            return (
+              <Fade>
+                <TimeLineItem key={index} data={data} id={index} />
+              </Fade>
+            );
+          } else {
+            return (
+              <Fade>
+                <TimeLineItem key={index} data={data} id={index} />
+              </Fade>
+            );
+          }
         })}
       </div>
     </div>
