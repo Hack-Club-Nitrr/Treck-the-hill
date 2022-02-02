@@ -1,9 +1,9 @@
 .container {
-  background: linear-gradient(to bottom, #152c3e, #37618a);
+  background: linear-gradient(to bottom, #152c3e, #193149);
   position: absolute;
   overflow: hidden;
   width: 100vw;
-  height: 300vh;
+  height: 600vh;
 }
 .banner {
   z-index: 2;
