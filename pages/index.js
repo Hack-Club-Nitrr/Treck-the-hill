@@ -3,6 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import Image from 'next/Image';
 import styles from '../styles/Home.module.css';
 import Stars from '../components/Stars';
+import { About } from '../components/About';
 
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -371,14 +372,16 @@ export default function Home() {
         <use x="480" y="-20" href="#tree" />
         <use x="440" y="-15" href="#tree" transform="scale(1.2)" />
       </svg>
-      <div className={styles.camp}>
+      {/* <div className={styles.camp}>
         <Image
           src="/camp.png"
           alt="camp"
           width={0.3 * width}
           height={0.3 * height}
         />
-      </div>
+      </div> */}
+      <div style={{ height: '250vh' }}></div>
+      <About />
       <style jsx>
         {`
           .background {
