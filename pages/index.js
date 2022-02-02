@@ -40,10 +40,10 @@ export default function Home() {
   useEffect(() => {
     bannerRef.current.style.transform = `translateY(${
       -0.6 * scrollPosition
-    }px) scale(1.2)`;
+    }px) scale(1)`;
     if (scrollPosition < 630) {
       tree1Ref.current.style.opacity = '1';
-      tree1Ref.current.style.transform = `scale(1.5)`;
+      tree1Ref.current.style.transform = `scale(2)`;
     } else {
       tree1Ref.current.style.opacity = `${1 - scrollPosition / 1000}`;
       tree1Ref.current.style.transform = `scale(${
@@ -54,7 +54,7 @@ export default function Home() {
     }
     if (scrollPosition < 700) {
       tree2Ref.current.style.opacity = '1';
-      tree2Ref.current.style.transform = `scale(1.5)`;
+      tree2Ref.current.style.transform = `scale(2)`;
     } else {
       tree2Ref.current.style.opacity = `${1 - scrollPosition / 1000}`;
       tree2Ref.current.style.transform = `scale(${
@@ -72,7 +72,7 @@ export default function Home() {
     }
     if (scrollPosition < 700) {
       tree3Ref.current.style.opacity = '1';
-      tree3Ref.current.style.transform = `scale(1.5)`;
+      tree3Ref.current.style.transform = `scale(2)`;
     } else {
       tree3Ref.current.style.opacity = `${1 - scrollPosition / 1000}`;
       tree3Ref.current.style.transform = `scale(${
@@ -121,12 +121,7 @@ export default function Home() {
         <Image src="/nightSky.jpg" alt="stars" width={width} height={height} />
       </div> */}
       <div className={styles.banner} ref={bannerRef}>
-        <Image
-          src="/banner.png"
-          alt="banner"
-          width={0.33 * width}
-          height={0.6 * height}
-        />
+        <img src="/banner.png" alt="banner" />
       </div>
       {/* <div className={styles.camp} ref={campRef}>
         <Image
@@ -387,14 +382,9 @@ export default function Home() {
         <use x="440" y="-15" href="#tree" transform="scale(1.2)" />
       </svg>
       <div className={styles.camp} ref={campRef}>
-        <Image
-          src="/camp.png"
-          alt="camp"
-          width={0.3 * width}
-          height={0.3 * height}
-        />
+        <img src="/camp.png" alt="camp" />
       </div>
-      <div style={{ height: '300vh' }}></div>
+      <div style={{ height: '1800px' }} className="compensation"></div>
 
       <About />
       <CyberJunkSocialMedia />
