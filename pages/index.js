@@ -4,7 +4,7 @@ import Image from 'next/Image';
 import styles from '../styles/Home.module.css';
 import Stars from '../components/Stars';
 import { About } from '../components/About';
-
+import { CyberJunkSocialMedia } from '../components/CyberJunkSocialMedia';
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [width, setWidth] = useState(0);
@@ -36,7 +36,6 @@ export default function Home() {
   const campRef = useRef(null);
   // const starsRef = useRef(null);
   const mountRef = useRef(null);
-  // const campRef = useRef(null);
 
   useEffect(() => {
     bannerRef.current.style.transform = `translateY(${
@@ -84,7 +83,7 @@ export default function Home() {
     }
     if (scrollPosition < 1100) {
       baseRef.current.style.opacity = '1';
-      // baseRef.current.style.transform = `scale(1.5)`;
+      baseRef.current.style.transform = `scale(1.5)`;
     } else {
       baseRef.current.style.opacity = `${2 - scrollPosition / 1100}`;
       baseRef.current.style.transform = `scale(${2 + scrollPosition / 1100})`;
@@ -398,6 +397,7 @@ export default function Home() {
       <div style={{ height: '300vh' }}></div>
 
       <About />
+      <CyberJunkSocialMedia />
 
       <style jsx>
         {`
