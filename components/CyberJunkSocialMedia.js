@@ -38,6 +38,7 @@ export const CyberJunkSocialMedia = () => {
             <a
               href="https://curator.io"
               target="_blank"
+              rel="noreferrer"
               className="crt-logo crt-tag"
               style={{ textDecoration: 'none' }}
             >
