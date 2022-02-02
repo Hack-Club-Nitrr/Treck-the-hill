@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { useEffect, useState, useRef } from 'react';
-import Image from 'next/Image';
 import styles from '../styles/Home.module.css';
 import Stars from '../components/Stars';
 import { About } from '../components/About';
