@@ -27,15 +27,23 @@ export const CyberJunkSocialMedia = () => {
 
       <div className="content_container">
         <div className="content">
-          <div className="heading">OUR ONLINE PRESENCE</div>
+          <div
+            className="heading"
+            style={{ fontSize: '20px', padding: '40px 20px' }}
+          >
+            OUR ONLINE PRESENCE
+          </div>
 
-          <div id="curator-feed-default-feed-layout">
+          <div id="curator-feed-default-feed-layout" style={{ color: 'white' }}>
             <a
               href="https://curator.io"
               target="_blank"
-              class="crt-logo crt-tag"
+              className="crt-logo crt-tag"
+              style={{ textDecoration: 'none' }}
             >
-              Powered by Curator.io
+              <div style={{ color: 'white !important' }}>
+                Powered by Curator.io
+              </div>
             </a>
           </div>
         </div>

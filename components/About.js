@@ -7,12 +7,11 @@ export const About = () => {
     <div>
       <div className="content_container">
         <div className="content">
-          <SimpleGrid minChildWidth="40%">
+          <SimpleGrid minChildWidth="300px">
             <Box>
               <img src="/about.png" alt="about" />
             </Box>
             <Box>
-              {' '}
               <h1 className="heading">ABOUT</h1>
               <br />
               <p>
@@ -56,7 +55,6 @@ export const About = () => {
             width: 100%;
             justify-content: center;
             padding: 20px 40px;
-            z-index: 10000000000000;
           }
 
           .content {
@@ -69,6 +67,17 @@ export const About = () => {
             border-radius: 20px;
             padding: 20px;
             letter-spacing: 1px;
+          }
+          @media screen and (max-width: 767px) {
+            .content_container {
+              padding: 20px 10px;
+            }
+
+            .content {
+              backdrop-filter: blur(8px);
+              background: rgba(0, 1, 53, 0.253);
+              padding: 10px;
+            }
           }
         `}
       </style>
