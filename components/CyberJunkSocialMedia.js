@@ -77,6 +77,11 @@ export const CyberJunkSocialMedia = () => {
             padding: 20px 40px;
             letter-spacing: 1px;
           }
+          @media screen and (max-width: 767px) {
+            .content {
+              padding: 20px;
+            }
+          }
         `}
       </style>
     </div>
