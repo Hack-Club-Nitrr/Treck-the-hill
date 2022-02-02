@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import '../styles/timeline.css';
+import '../styles/teams.css';
 //Navbar
 
 import Navbar from "../components/Navbar.js";
