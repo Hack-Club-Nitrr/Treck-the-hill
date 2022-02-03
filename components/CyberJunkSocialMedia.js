@@ -6,7 +6,6 @@ export const CyberJunkSocialMedia = () => {
   return (
     <div className="container">
       <Head>
-        <title>social-media</title>
         {/* cyber junk script */}
         <script type="text/javascript">
           {`(function () {
