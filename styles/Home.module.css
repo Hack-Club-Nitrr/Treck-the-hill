@@ -3,7 +3,7 @@
   position: absolute;
   overflow: hidden;
   width: 100vw;
-  height: 600vh;
+  height: fit-content;
 }
 .banner {
   z-index: 2;

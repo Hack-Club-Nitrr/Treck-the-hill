@@ -1,4 +1,6 @@
 /* Number Bar */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
 .numberbar {
   width: 100%;
   align-items: center;
@@ -57,6 +59,7 @@
 /* Timeline Page */
 .timeline_page {
   min-height: 100vh;
+  font-family: 'Comfortaa', cursive;
 }
 
 /* Timeline container */
@@ -88,8 +91,10 @@
 /* Timline Each Item */
 .timeline_item {
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.16);
-  background-color: #fff;
+  background: rgba(0, 1, 53, 0.253);
   width: 50%;
+  backdrop-filter: blur(12px);
+  color: white;
 }
 
 .timeline_content {
@@ -97,8 +102,10 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: white;
+
   row-gap: clamp(10px, 4vh, 20px);
+  backdrop-filter: blur(10px);
+  color: white;
 }
 
 .timeline_heading {

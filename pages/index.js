@@ -5,6 +5,7 @@ import Stars from '../components/Stars';
 import { About } from '../components/About';
 import { CyberJunkSocialMedia } from '../components/CyberJunkSocialMedia';
 import { Navbar } from '../components/Navbar';
+import { Timeline } from '../components/Timeline';
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [width, setWidth] = useState(0);
@@ -111,7 +112,7 @@ export default function Home() {
   console.log(scrollPosition);
   return (
     <div className={styles.container}>
-      <Navbar/>
+      <Navbar />
       <Stars />
       <Head>
         <title>Treck The Hill</title>
@@ -389,7 +390,7 @@ export default function Home() {
 
       <About />
       <CyberJunkSocialMedia />
-
+      <Timeline />
       <style jsx>
         {`
           .background {
