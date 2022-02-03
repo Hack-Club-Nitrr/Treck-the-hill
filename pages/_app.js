@@ -1,5 +1,4 @@
 import '../styles/globals.css';
-import '../styles/timeline.css';
 //Navbar
 
 import Navbar from "../components/Navbar.js";
