@@ -1,5 +1,7 @@
 import React from 'react';
 import {useRef} from 'react';
+import { BiAlignLeft } from "react-icons/bi";
+import { GiCrossedAxes } from "react-icons/gi";
 
 
     
@@ -9,10 +11,10 @@ const momenu = useRef(null)
     const showMenu = () => {
         momenu.current.style.opacity = "1";
         momenu.current.style.zIndex = "1000";
-        alert("this is");
+       
     };
     const closeMenu = () => {
-        alert("this is");
+        
       momenu.current.style.opacity = "0";
       momenu.current.style.zIndex = "-1";
     };
@@ -26,7 +28,7 @@ const momenu = useRef(null)
           closeMenu();
         }}
       >
-        close
+       <GiCrossedAxes  size={40}/>
       </div>
       <div className="mo_link">home</div>
       <div className="mo_link">pages</div>
@@ -55,12 +57,13 @@ const momenu = useRef(null)
         
         </div>
         <div
-          className="icons"
+          className="icons toggleIcon "
+       
           onClick={() => {
             showMenu();
           }}
         >
-         open
+         <BiAlignLeft size={50} color='white'/>
         </div>
       </div>
     </div>
@@ -109,6 +112,7 @@ const momenu = useRef(null)
             color: var(--lightpink);
             border-bottom: 2px solid var(--lightpink);
             margin-top: -2px;
+            color:silver;
           }
           .icons {
             padding: 0px 15px;
@@ -118,6 +122,7 @@ const momenu = useRef(null)
               display:none;
           }
 
+          
           
 @media screen and (max-width: 767px) {
     
@@ -178,13 +183,16 @@ const momenu = useRef(null)
       height: 100%;
       padding-top: 70px;
       transition: 0.4s ease-in-out;
+      opacity:0;
     }
     .closebtn {
       font-size: 30px;
       color: white;
       position: absolute;
-      top: 10px;
-      right: 20px;
+      top: 25px;
+      right: 35px;
+
+     
     }
     .mo_link {
       color: white;
@@ -193,6 +201,13 @@ const momenu = useRef(null)
       font-size: 20px;
       text-transform: capitalize;
       border-bottom: 1px solid rgb(51, 51, 51);
+    }
+  }
+
+  @media only screen and (min-width: 768px)
+  {
+    .toggleIcon{
+        display:none;
     }
   }
         `}
