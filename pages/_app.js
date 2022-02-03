@@ -19,9 +19,9 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider>
       {/* <Navbar> */}
      
-      {/*<Component {...pageProps} />*/}
+      <Component {...pageProps} />
       {/* </Navbar> */}
-       <Sponsors/> 
+       {/*<Sponsors/> */}
     </ChakraProvider>
 
   );
