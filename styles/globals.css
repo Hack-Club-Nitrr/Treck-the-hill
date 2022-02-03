@@ -41,6 +41,8 @@ a {
 
 .sponser img{
   height: 40vh;
+  
+  /*mix-blend-mode: darken;*/
 }
 .sponser{
   margin: 10vh 0;
@@ -50,11 +52,75 @@ a {
   overflow: hidden;
   overflow-y: scroll;
   background-blend-mode: darken;
-  
+  scroll-behavior: smooth;
 }
 .sponser h1{
   font-size: xxx-large;
     font-weight: inherit;
     font-family: ui-sans-serif;
     color: white;
+}
+
+.sponser h2{
+color: yellow;
+    text-align: center;
+}
+
+.gold{
+  display: flex;
+  justify-content: center;
+}
+.gold img{
+  width: 33vw;
+  height: 33vw;
+  max-height: 33vh;
+  min-width: 33vh;
+}
+.silver{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.silver img{
+  width: 21vw;
+  height: 20vw;
+  padding: 4vw 4vw ;
+  
+}
+@media screen and (max-width: 700px){
+  .sponser img{
+    height: 30vh;
+  }
+  .sponser h1{
+    font-size: x-large;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  .sponser h2{
+    font-size: small;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  .sponser{
+    margin: 5vh 0;
+  }
+  .gold img{
+    width: 30vw;
+    height: 30vw;
+    max-height: 30vh;
+  }
+  .silver img{
+    width: 15vw;
+    height: 15vw;
+    max-height: 15vh;
+    max-width: 15vh;
+    padding: 1vw;
+  }
+
+  .gold{
+    flex-wrap: wrap;
+  }
+  .platinum{
+    flex-wrap: wrap;
+  }
 }

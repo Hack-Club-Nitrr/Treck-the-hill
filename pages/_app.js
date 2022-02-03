@@ -3,7 +3,7 @@ import '../styles/timeline.css';
 //Navbar
 
 import Navbar from "../components/Navbar.js";
-import Sponsers from "./sponsers.js";
+import Sponsors from "./sponsers.js";
 
 
 import { ChakraProvider } from '@chakra-ui/react';
@@ -19,9 +19,9 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider>
       {/* <Navbar> */}
      
-      <Component {...pageProps} />
+      {/*<Component {...pageProps} />*/}
       {/* </Navbar> */}
-      {/* <Sponsors/> */}
+       <Sponsors/> 
     </ChakraProvider>
 
   );
