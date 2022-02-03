@@ -44,9 +44,9 @@ export default function Home() {
       tree1Ref.current.style.opacity = '1';
       tree1Ref.current.style.transform = `scale(2)`;
     } else {
-      tree1Ref.current.style.opacity = `${1 - scrollPosition / 1000}`;
+      tree1Ref.current.style.opacity = `${2 - scrollPosition / 630}`;
       tree1Ref.current.style.transform = `scale(${
-        1.5 + scrollPosition / 1000
+        1 + scrollPosition / 630
       }) translate(${315 - 0.5 * scrollPosition}px,${
         -252 + 0.4 * scrollPosition
       }px)`;
@@ -55,9 +55,9 @@ export default function Home() {
       tree2Ref.current.style.opacity = '1';
       tree2Ref.current.style.transform = `scale(2)`;
     } else {
-      tree2Ref.current.style.opacity = `${1 - scrollPosition / 1000}`;
+      tree2Ref.current.style.opacity = `${2 - scrollPosition / 700}`;
       tree2Ref.current.style.transform = `scale(${
-        1.5 + scrollPosition / 1000
+        1 + scrollPosition / 700
       }) translate(${350 - 0.5 * scrollPosition}px,${
         -280 + 0.4 * scrollPosition
       }px)`;
@@ -66,16 +66,16 @@ export default function Home() {
       campRef.current.style.opacity = '1';
       campRef.current.style.transform = `scale(1)`;
     } else {
-      campRef.current.style.opacity = `${1 - scrollPosition / 1000}`;
-      campRef.current.style.transform = `scale(${1 + scrollPosition / 1000})`;
+      campRef.current.style.opacity = `${2 - scrollPosition / 700}`;
+      campRef.current.style.transform = `scale(${scrollPosition / 700})`;
     }
     if (scrollPosition < 700) {
       tree3Ref.current.style.opacity = '1';
       tree3Ref.current.style.transform = `scale(2)`;
     } else {
-      tree3Ref.current.style.opacity = `${1 - scrollPosition / 1000}`;
+      tree3Ref.current.style.opacity = `${2 - scrollPosition / 700}`;
       tree3Ref.current.style.transform = `scale(${
-        1.5 + scrollPosition / 1000
+        1 + scrollPosition / 700
       }) translate(${-350 + 0.5 * scrollPosition}px,${
         -280 + 0.4 * scrollPosition
       }px)`;
