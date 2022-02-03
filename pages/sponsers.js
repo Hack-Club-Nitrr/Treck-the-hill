@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+
 
 let sponsor1 = 'https://hack-club-nitrr.netlify.app/static/media/icon-rounded.b2825959.png';
 let sponsor2 = 'https://www.seoclerk.com/pics/000/748/061/bd1ddcf20243b5366e14524b6b79c773.png';
@@ -27,10 +27,72 @@ let specialSponsorNames = [
   { name: '2adobe', image: sponsor4, link: 'https://www.google.com', category: "platinum" }
 ]
 
+import sponsor1 from '../public/mmc.png';
+import sponsor2 from '../public/binance.png';
+import sponsor3 from '../public/mmc.png';
+import sponsor4 from '../public/mmc.png';
+
+//this is the data about the sponsers, not just the names, but the links and images too...
+let sponsorNames = [
+  {
+    name: 'google',
+    img: sponsor1,
+    link: 'https://www.google.com',
+    tag: 'title_sponsor',
+  }, //this tag we will also use for individual styling, so we can use it in the css
+  {
+    name: 'apple',
+    img: sponsor2,
+    link: 'https://www.google.com',
+    tag: 'branding_sponsor',
+  },
+  {
+    name: 'google',
+    img: sponsor3,
+    link: 'https://www.google.com',
+    tag: 'education_sponsor',
+  },
+  {
+    name: 'apple',
+    img: sponsor4,
+    link: 'https://www.google.com',
+    tag: 'masti_sponsor',
+  },
+];
+
+let specialSponsorNames = [
+  {
+    name: 'google',
+    img: sponsor1,
+    link: 'https://www.google.com',
+    tag: 'title_sponsor',
+  }, //this tag we will also use for individual styling, so we can use it in the css
+  {
+    name: 'apple',
+    img: sponsor2,
+    link: 'https://www.google.com',
+    tag: 'branding_sponsor',
+  },
+  {
+    name: 'google',
+    img: sponsor3,
+    link: 'https://www.google.com',
+    tag: 'education_sponsor',
+  },
+  {
+    name: 'apple',
+    img: sponsor4,
+    link: 'https://www.google.com',
+    tag: 'masti_sponsor',
+  },
+];
+
+
 //specialSponsorNames = dataList
 
 //utility element for the sponsers
 const Sponser = (props) => {
+
   let backgroundHandler = () => {
     //console.log('clicked'); 
     props.clickHandler(props.sponsorImg)
@@ -51,11 +113,19 @@ const Sponser = (props) => {
         <a href={props.sponsorLink}>
           <h1>{props.sponsorName}</h1>
           <h2>{props.category+" Sponsers"}</h2>
+
+  return (
+    <div>
+      <div className={'sponser ' + props.tag}>
+        <img src={props.sponsorImg} alt="sponsor1" />
+        <a href={props.sponsorLink}>
+          <p>{props.sponsorName}</p>
+
         </a>
       </div>
-
     </div>
   );
+
 }
 
 
@@ -146,6 +216,42 @@ setTimeout(() => {
     });
   }
 }, 500)*/
+
+};
+
+const sponsers = () => {
+  let sponserList = sponsorNames.map((Sponsor) => {
+    return (
+      <Sponser
+        sponsorName={Sponsor.name}
+        sponsorImg={Sponsor.img}
+        sponsorLink={Sponsor.link}
+        tag={Sponsor.tag}
+        key={Math.random()}
+      />
+    );
+  });
+  let specialSponserList = specialSponsorNames.map((Sponsor) => {
+    return (
+      <Sponser
+        sponsorName={Sponsor.name}
+        sponsorImg={Sponsor.img}
+        sponsorLink={Sponsor.link}
+        tag={Sponsor.tag}
+        key={Math.random()}
+      />
+    );
+  });
+
+  return (
+    <>
+      <div className="specialSponsers">{specialSponserList}</div>
+
+      <div className="normalSponsers">{sponserList}</div>
+    </>
+  );
+};
+
 
 //module.exports = sponsers;
 export default sponsers;

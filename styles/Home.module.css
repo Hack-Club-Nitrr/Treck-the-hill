@@ -1,23 +1,22 @@
-.main {
-  min-height: 100vh;
-  padding: 4rem;
-  flex: 1;
-}
 .container {
-  background-color: #000000e1;
+  background: linear-gradient(to bottom, #152c3e, #193149);
   position: absolute;
   overflow: hidden;
   width: 100vw;
-  height: 300vh;
+  height: 600vh;
 }
 .banner {
   z-index: 2;
+  transform: scale(1.2);
+  position: fixed;
+  top: -8%;
+  left: 33.5%;
+  width: 33%;
 }
-
-.title a:hover,
-q .title a:focus,
-.title a:active {
-  text-decoration: underline;
+.base {
+  position: fixed;
+  bottom: 0px;
+  z-index: 2;
 }
 .stars {
   position: fixed;
@@ -27,30 +26,96 @@ q .title a:focus,
   opacity: 0;
 }
 
-.mountLef {
-  z-index: 1;
-  position: fixed;
-  bottom: 0px;
-  left: 0%;
-  transform: translateX(-600px);
-}
-.mountRig {
-  z-index: 1;
-  position: fixed;
-  bottom: 0px;
-  right: 0%;
-  transform: translateX(600px);
-}
 .camp {
-  z-index: 2;
+  z-index: 3;
   position: fixed;
-  right: 0%;
+  width: 25%;
+  right: 37.5%;
   bottom: 0px;
-  transform: translateX(600px);
 }
 .mount {
   z-index: 1;
   position: fixed;
   bottom: 0px;
   left: 0%;
+}
+.trees1,
+.trees2,
+.trees3 {
+  transform: scale(2);
+  position: fixed;
+  bottom: 0px;
+  z-index: 2;
+}
+.trees1 {
+  left: -5%;
+  bottom: -40px;
+}
+.trees2 {
+  left: 13%;
+  bottom: -20px;
+}
+.trees3 {
+  right: 15%;
+  bottom: -20px;
+}
+.hills {
+  position: fixed;
+  bottom: -53%;
+  z-index: 1;
+  left: -8%;
+}
+.cloud1 {
+  top: 20%;
+  right: 10%;
+  position: fixed;
+  animation: bounce 2s ease-in-out 0s infinite alternate;
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-4px);
+  }
+}
+.cloud2 {
+  top: 20%;
+  left: 10%;
+  position: fixed;
+  animation: bounce 3.5s ease-in-out 2s infinite alternate;
+}
+
+@media screen and (max-width: 767px) {
+  .banner {
+    top: -5%;
+    left: 5%;
+    width: 90%;
+  }
+  .camp {
+    right: 15%;
+    bottom: -2%;
+    width: 70%;
+  }
+  .base {
+    bottom: 20px;
+  }
+  .hills {
+    bottom: -30%;
+    left: -60%;
+    width: 200%;
+  }
+
+  .trees1 {
+    left: -55%;
+    bottom: -40px;
+    z-index: 20;
+  }
+  .trees2 {
+    left: 0%;
+  }
+  .trees3 {
+    right: 0%;
+    bottom: -50px;
+  }
 }
