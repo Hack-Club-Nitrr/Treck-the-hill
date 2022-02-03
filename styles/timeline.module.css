@@ -140,3 +140,40 @@
 .main_heading {
   font-size: clamp(15px, 7vh, 45px);
 }
+
+@media screen and (max-width: 767px) {
+  .timeline_item {
+    width: 100%;
+  }
+
+  .timeline_item:nth-child(even) .numberbar {
+    flex-direction: row;
+  }
+  .timeline_item:nth-child(odd) .numberbar {
+    flex-direction: row;
+  }
+
+  .timeline_item:nth-child(even) {
+    align-self: flex-start;
+    text-align: left;
+  }
+  .timeline_item:nth-child(odd) {
+    text-align: left;
+  }
+
+  .timeline_item:nth-child(even) h1 {
+    flex-direction: row;
+  }
+
+  .timeline_item:nth-child(odd) .timeline_heading {
+    align-self: flex-start;
+  }
+  .timeline_item:nth-child(even) .timeline_heading {
+    align-self: flex-start;
+  }
+  .timeline_item .timeline_content {
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-right: unset !important;
+  }
+}

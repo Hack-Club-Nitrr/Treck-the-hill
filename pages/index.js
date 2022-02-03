@@ -6,6 +6,7 @@ import { About } from '../components/About';
 import { CyberJunkSocialMedia } from '../components/CyberJunkSocialMedia';
 import { Navbar } from '../components/Navbar';
 import { Timeline } from '../components/Timeline';
+import { Sponsers } from '../components/Sponsers';
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [width, setWidth] = useState(0);
@@ -391,6 +392,7 @@ export default function Home() {
       <About />
       <CyberJunkSocialMedia />
       <Timeline />
+      <Sponsers />
       <style jsx>
         {`
           .background {
