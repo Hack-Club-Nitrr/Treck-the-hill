@@ -114,13 +114,7 @@ export default function Home() {
   console.log(scrollPosition);
   return (
     <div className={styles.container}>
-      <Navbar />
       <Stars />
-      <Head>
-        <title>Treck The Hill</title>
-        <meta name="description" content="Treck the Hill" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       {/* <div className={styles.stars} ref={starsRef}>
         <Image src="/nightSky.jpg" alt="stars" width={width} height={height} />
       </div> */}
