@@ -1,7 +1,8 @@
 import { Flex } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
+import { Navbar } from '../components/Navbar';
+import Loader from '../components/Loader';
 
 function Layout({ children }) {
 
@@ -10,7 +11,7 @@ function Layout({ children }) {
     useEffect(() => {
         setTimeout(() => {
             setLoading(true);
-        }, 5000);
+        }, 6000);
     }, [])
 
     return (
@@ -22,11 +23,11 @@ function Layout({ children }) {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
             <Flex flexDir={['column', 'column', 'row']}>
-                {/* {!Loading ? <Loader /> :
+                {!Loading ? <Loader /> :
                     <>
-                        <Navbar/>
+                        <Navbar />
                         {children}
-                    </>} */}
+                    </>}
             </Flex>
         </>
     )
