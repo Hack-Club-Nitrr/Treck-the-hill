@@ -54,6 +54,10 @@ export const CyberJunkSocialMedia = () => {
       <br />
       <style jsx>
         {`
+          .container{
+            position: relative;
+            z-index:8888888888;
+          }
           .heading {
             font-family: 'Press Start 2P', cursive;
             font-size: 40px;
