@@ -362,11 +362,21 @@ export default function Home() {
       </div>
       <div style={{ height: '1800px' }} className="compensation"></div>
 
-      <About />
-      <CyberJunkSocialMedia />
-      <Timeline />
-      <Teams />
-      <Sponsers />
+      <div id="about">
+        <About />
+      </div>
+      <div id="social_media">
+        <CyberJunkSocialMedia />
+      </div>
+      <div id="events">
+        <Timeline />
+      </div>
+      <div id="team">
+        <Teams />
+      </div>
+      <div id="sponsers">
+        <Sponsers />
+      </div>
       <style jsx>
         {`
           .background {
