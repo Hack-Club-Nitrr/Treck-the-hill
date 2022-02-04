@@ -5,6 +5,8 @@ import Head from 'next/head';
 export const CyberJunkSocialMedia = () => {
   return (
     <div className="container">
+    
+
       <Head>
         {/* cyber junk script */}
         <script type="text/javascript">
@@ -23,7 +25,7 @@ export const CyberJunkSocialMedia = () => {
           })()`}
         </script>
       </Head>
-
+      
       <div className="content_container">
         <div className="content">
           <div
@@ -54,6 +56,10 @@ export const CyberJunkSocialMedia = () => {
       <br />
       <style jsx>
         {`
+          .container{
+            position: relative;
+            z-index:99;
+          }
           .heading {
             font-family: 'Press Start 2P', cursive;
             font-size: 40px;
@@ -82,6 +88,7 @@ export const CyberJunkSocialMedia = () => {
               padding: 20px;
             }
           }
+
         `}
       </style>
     </div>

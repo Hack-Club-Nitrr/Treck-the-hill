@@ -107,7 +107,6 @@ export default function Home() {
   console.log(scrollPosition);
   return (
     <div className={styles.container}>
-      <Navbar />
       <Stars />
       <Head>
         <title>Treck The Hill</title>
