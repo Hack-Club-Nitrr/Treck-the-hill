@@ -148,7 +148,10 @@
   .timeline_item {
     width: 100%;
   }
-
+  .timeline_image {
+    width: 100%;
+    margin: 0px auto;
+  }
   .timeline_item:nth-child(even) .numberbar {
     flex-direction: row;
   }
