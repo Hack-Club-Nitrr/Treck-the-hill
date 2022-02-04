@@ -1,41 +1,40 @@
 import React from 'react';
 import { SimpleGrid, Box } from '@chakra-ui/react';
-import Image from 'next/Image';
 
 export const About = () => {
   return (
     <div>
       <div className="content_container">
         <div className="content">
-          <SimpleGrid minChildWidth="40%">
+          <SimpleGrid minChildWidth="300px">
             <Box>
               <img src="/about.png" alt="about" />
             </Box>
             <Box>
-              {' '}
               <h1 className="heading">ABOUT</h1>
               <br />
               <p>
-                ABOUT Discover your craft this fall at HackGT 8 from October
-                22nd - 24th! We’re back with the eighth iteration of our
-                flagship event where we bring you to the HackGT marketplace to
-                support you as you hone your hacking skills and explore a
-                weekend filled with community and compassion.
+                The goal of Hack Club is to help you become a hacker. Being
+                entirely student led, this provides you the space to learn and
+                grow with the community. What is a Hack Club? The Hack Club is a
+                non-profit global network of young makers and student-led
+                programming clubs where young people create projects and thrive
+                to think big and make an impact with technology around the
+                world.
               </p>
               <br />
               <p>
-                This year, we’ll be welcoming over 1,500 talented hackers from
-                around the world to win amazing prizes, meet new people, and
-                experience a weekend filled with quests and adventure!
+                What is a Hack Club? The Hack Club is a non-profit global
+                network of young makers and student-led programming clubs where
+                young people create projects and thrive to think big and make an
+                impact with technology around the world. We at Hack Club NITRR!
+                🚀 Hack Club NITRR is a community where students from different
+                branches and domains can come together and tinker with various
+                new and upcoming techs. We aim to spread technical awareness
+                among students who are new to this field and are confused about
+                where to start.
               </p>
               <br />
-              <p>
-                Our first-ever hybrid event will redefine the hacker experience
-                by bringing you the best of both worlds. Not only will we be
-                supplying workshops, mentors, and tech talks, but we will also
-                have built-in, cross-platform interactions to bridge the virtual
-                and in-person experiences.
-              </p>
             </Box>
           </SimpleGrid>
         </div>
@@ -56,7 +55,6 @@ export const About = () => {
             width: 100%;
             justify-content: center;
             padding: 20px 40px;
-            z-index: 10000000000000;
           }
 
           .content {
@@ -69,6 +67,17 @@ export const About = () => {
             border-radius: 20px;
             padding: 20px;
             letter-spacing: 1px;
+          }
+          @media screen and (max-width: 767px) {
+            .content_container {
+              padding: 20px 10px;
+            }
+
+            .content {
+              backdrop-filter: blur(8px);
+              background: rgba(0, 1, 53, 0.253);
+              padding: 10px;
+            }
           }
         `}
       </style>

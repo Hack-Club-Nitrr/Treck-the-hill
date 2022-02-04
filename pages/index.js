@@ -1,10 +1,13 @@
 import Head from 'next/head';
 import { useEffect, useState, useRef } from 'react';
-import Image from 'next/Image';
 import styles from '../styles/Home.module.css';
 import Stars from '../components/Stars';
 import { About } from '../components/About';
 import { CyberJunkSocialMedia } from '../components/CyberJunkSocialMedia';
+import { Navbar } from '../components/Navbar';
+import { Timeline } from '../components/Timeline';
+import Teams from '../components/Teams';
+import { Sponsers } from '../components/Sponsers';
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [width, setWidth] = useState(0);
@@ -40,25 +43,25 @@ export default function Home() {
   useEffect(() => {
     bannerRef.current.style.transform = `translateY(${
       -0.6 * scrollPosition
-    }px) scale(1.2)`;
+    }px) scale(1)`;
     if (scrollPosition < 630) {
       tree1Ref.current.style.opacity = '1';
-      tree1Ref.current.style.transform = `scale(1.5)`;
+      tree1Ref.current.style.transform = `scale(2)`;
     } else {
-      tree1Ref.current.style.opacity = `${1 - scrollPosition / 1000}`;
+      tree1Ref.current.style.opacity = `${2 - scrollPosition / 630}`;
       tree1Ref.current.style.transform = `scale(${
-        1.5 + scrollPosition / 1000
+        1 + scrollPosition / 630
       }) translate(${315 - 0.5 * scrollPosition}px,${
         -252 + 0.4 * scrollPosition
       }px)`;
     }
     if (scrollPosition < 700) {
       tree2Ref.current.style.opacity = '1';
-      tree2Ref.current.style.transform = `scale(1.5)`;
+      tree2Ref.current.style.transform = `scale(2)`;
     } else {
-      tree2Ref.current.style.opacity = `${1 - scrollPosition / 1000}`;
+      tree2Ref.current.style.opacity = `${2 - scrollPosition / 700}`;
       tree2Ref.current.style.transform = `scale(${
-        1.5 + scrollPosition / 1000
+        1 + scrollPosition / 700
       }) translate(${350 - 0.5 * scrollPosition}px,${
         -280 + 0.4 * scrollPosition
       }px)`;
@@ -67,16 +70,16 @@ export default function Home() {
       campRef.current.style.opacity = '1';
       campRef.current.style.transform = `scale(1)`;
     } else {
-      campRef.current.style.opacity = `${1 - scrollPosition / 1000}`;
-      campRef.current.style.transform = `scale(${1 + scrollPosition / 1000})`;
+      campRef.current.style.opacity = `${2 - scrollPosition / 700}`;
+      campRef.current.style.transform = `scale(${scrollPosition / 700})`;
     }
     if (scrollPosition < 700) {
       tree3Ref.current.style.opacity = '1';
-      tree3Ref.current.style.transform = `scale(1.5)`;
+      tree3Ref.current.style.transform = `scale(2)`;
     } else {
-      tree3Ref.current.style.opacity = `${1 - scrollPosition / 1000}`;
+      tree3Ref.current.style.opacity = `${2 - scrollPosition / 700}`;
       tree3Ref.current.style.transform = `scale(${
-        1.5 + scrollPosition / 1000
+        1 + scrollPosition / 700
       }) translate(${-350 + 0.5 * scrollPosition}px,${
         -280 + 0.4 * scrollPosition
       }px)`;
@@ -111,6 +114,7 @@ export default function Home() {
   console.log(scrollPosition);
   return (
     <div className={styles.container}>
+      <Navbar />
       <Stars />
       <Head>
         <title>Treck The Hill</title>
@@ -121,12 +125,7 @@ export default function Home() {
         <Image src="/nightSky.jpg" alt="stars" width={width} height={height} />
       </div> */}
       <div className={styles.banner} ref={bannerRef}>
-        <Image
-          src="/banner.png"
-          alt="banner"
-          width={0.33 * width}
-          height={0.6 * height}
-        />
+        <img src="/banner.png" alt="banner" />
       </div>
       {/* <div className={styles.camp} ref={campRef}>
         <Image
@@ -261,7 +260,7 @@ export default function Home() {
       >
         <path
           fill="#879759"
-          fill-opacity="1"
+          fillOpacity="1"
           d="M0,288L120,261.3C240,235,480,181,720,181.3C960,181,1200,235,1320,261.3L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
         ></path>
       </svg>
@@ -387,18 +386,15 @@ export default function Home() {
         <use x="440" y="-15" href="#tree" transform="scale(1.2)" />
       </svg>
       <div className={styles.camp} ref={campRef}>
-        <Image
-          src="/camp.png"
-          alt="camp"
-          width={0.3 * width}
-          height={0.3 * height}
-        />
+        <img src="/camp.png" alt="camp" />
       </div>
-      <div style={{ height: '300vh' }}></div>
+      <div style={{ height: '1800px' }} className="compensation"></div>
 
       <About />
       <CyberJunkSocialMedia />
-
+      <Timeline />
+      <Teams />
+      <Sponsers />
       <style jsx>
         {`
           .background {
