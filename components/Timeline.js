@@ -2,8 +2,22 @@ import React from 'react';
 import styles from '../styles/timeline.module.css';
 import { timeLineData } from '../components/Timeline/timeLineData';
 import TimeLineItem from '../components/Timeline/TimeLineItem';
+import { useEffect, useState, useRef } from 'react';
+import axios from 'axios';
 
 export const Timeline = () => {
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get('https://trekthehill.herokuapp.com/api/event/')
+      .then((response) => {
+        console.log(response);
+        setEvents(response.data);
+      })
+      .catch((error) => {});
+  }, []);
+
   return (
     <div className={styles.timeline_page}>
       {/* <h1>hello</h1> */}
@@ -14,7 +28,7 @@ export const Timeline = () => {
         >
           Event Timeline
         </h1>
-        {timeLineData.map((data, index) => {
+        {events.map((data, index) => {
           if (index % 2 === 0) {
             return <TimeLineItem key={index} data={data} id={index} />;
           } else {
