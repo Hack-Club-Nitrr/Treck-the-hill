@@ -17,11 +17,11 @@ export const Sponsers = () => {
         console.log(response);
         setSponsers(response.data);
 
-        // for(var i=0; i< sponsers.length;i++){
-        //     if(sponsers[i].category==="diamond"){
-        //         setdiamond()
-        //     }
-        // }
+        for (var i = 0; i < sponsers.length; i++) {
+          if (sponsers[i].category === 'diamond') {
+            setdiamond();
+          }
+        }
       })
       .catch((error) => {});
   }, []);
