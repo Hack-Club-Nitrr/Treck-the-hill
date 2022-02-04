@@ -11,7 +11,7 @@ import { Zoom } from 'react-awesome-reveal';
 
 const TeamCard = ({ delay, member }) => {
   return (
-    <Zoom delay={delay}>
+    <Zoom delay={delay} triggerOnce>
       <div className={styles.card}>
         <div className={styles.imgBox}>
           <img src={member.image} />

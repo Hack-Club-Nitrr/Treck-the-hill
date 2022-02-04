@@ -35,27 +35,7 @@ const Teams = () => {
         <div className={styles.A}>
           {teamsData.map((member, ind) => {
             return (
-              <TeamCard delay={(ind + 1) * 500} member={member} key={ind} />
-            );
-          })}
-          {teamsData.map((member, ind) => {
-            return (
-              <TeamCard delay={(ind + 1) * 500} member={member} key={ind} />
-            );
-          })}
-          {teamsData.map((member, ind) => {
-            return (
-              <TeamCard delay={(ind + 1) * 500} member={member} key={ind} />
-            );
-          })}
-          {teamsData.map((member, ind) => {
-            return (
-              <TeamCard delay={(ind + 1) * 500} member={member} key={ind} />
-            );
-          })}
-          {teamsData.map((member, ind) => {
-            return (
-              <TeamCard delay={(ind + 1) * 500} member={member} key={ind} />
+              <TeamCard delay={500} member={member} key={ind} />
             );
           })}
         </div>
@@ -64,7 +44,7 @@ const Teams = () => {
         <div className={styles.B}>
           {teamsData.map((member, ind) => {
             return (
-              <TeamCard delay={(ind + 1) * 500} member={member} key={ind} />
+              <TeamCard delay={500} member={member} key={ind} />
             );
           })}
         </div>
