@@ -68,7 +68,7 @@ const Contact = () => {
       <img src={shapeImage} className={styles.square} alt="" />
       <div className={styles.form}>
         <div className={styles.contactInfo}>
-          <h3 className={styles.contactTitle}>Let's get in touch</h3>
+          <h3 className={styles.contactTitle}>Let&apos;s get in touch</h3>
           <p className={styles.text}>
             Be ready to witness one of the big tech events of the months ,trek
             the hill and if you have any query regarding the events feel free to
