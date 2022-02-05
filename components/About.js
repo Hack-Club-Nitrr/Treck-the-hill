@@ -13,16 +13,7 @@ export const About = () => {
             <Box>
               <h1 className="heading">ABOUT</h1>
               <br />
-              <p>
-                The goal of Hack Club is to help you become a hacker. Being
-                entirely student led, this provides you the space to learn and
-                grow with the community. What is a Hack Club? The Hack Club is a
-                non-profit global network of young makers and student-led
-                programming clubs where young people create projects and thrive
-                to think big and make an impact with technology around the
-                world.
-              </p>
-              <br />
+              
               <p>
                 What is a Hack Club? The Hack Club is a non-profit global
                 network of young makers and student-led programming clubs where
