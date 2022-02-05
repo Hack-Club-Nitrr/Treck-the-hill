@@ -34,6 +34,11 @@ export const About = () => {
                 among students who are new to this field and are confused about
                 where to start.
               </p>
+              
+              <br />
+              <p>
+              CyberJunk is a global initiative to promote international infosec research culture. The community provides free courses and uncountable infosec resources like roadmaps & tools. CyberJunk also conducts various live events and workshops to learn and sharpen cybersecurity skills.
+              </p>
               <br />
             </Box>
           </SimpleGrid>
