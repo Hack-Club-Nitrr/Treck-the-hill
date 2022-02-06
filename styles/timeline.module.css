@@ -134,18 +134,24 @@
 }
 
 .timeline_para {
-  font-size: clamp(7px, 3.8vh, 20px);
+  font-size: clamp(7px, 3.8vh, 16px);
 }
 
 .main_heading {
   font-size: clamp(15px, 7vh, 45px);
 }
-
+.timeline_image {
+  width: 80%;
+  margin: 0px auto;
+}
 @media screen and (max-width: 767px) {
   .timeline_item {
     width: 100%;
   }
-
+  .timeline_image {
+    width: 100%;
+    margin: 0px auto;
+  }
   .timeline_item:nth-child(even) .numberbar {
     flex-direction: row;
   }

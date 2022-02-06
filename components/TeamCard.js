@@ -11,12 +11,17 @@ import { Zoom } from 'react-awesome-reveal';
 
 const TeamCard = ({ delay, member }) => {
   return (
-    <Zoom delay={delay}>
-      <div className={styles.card}>
-        <div className={styles.imgBox}>
-          <img src={member.image} />
+    <Zoom delay={delay} triggerOnce>
+      <div className={styles.card_column}>
+        <div className={styles.card_col_1}>
+          <div className={styles.card}>
+            <div className={styles.imgBox}>
+              <img src={member.image} />
+            </div>
+            <div className={styles.content}></div>
+          </div>
         </div>
-        <div className={styles.content}>
+        <div className={styles.card_col_2}>
           <div className={styles.details}>
             <h2>
               {member.name}

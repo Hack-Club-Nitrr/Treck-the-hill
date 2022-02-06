@@ -45,22 +45,40 @@ export const Navbar = () => {
         >
           <GiCrossedAxes size={40} />
         </div>
-        <div className="mo_link">home</div>
-        <div className="mo_link">pages</div>
-        <div className="mo_link">portfolio</div>
-        <div className="mo_link">headers</div>
-        <div className="mo_link">elements</div>
-        <div className="mo_link">blog</div>
+        <div className="mo_link">
+          <a href="#about">About</a>
+        </div>
+        <div className="mo_link">
+          <a href="#events">Events</a>
+        </div>
+        <div className="mo_link">
+          <a href="#social_media">Social Media</a>
+        </div>
+        <div className="mo_link">
+          <a href="#team">Team</a>
+        </div>
+        <div className="mo_link">
+          <a href="#contact">Contact</a>
+        </div>
       </div>
       <div className="topnav" id="topnav" ref={topnav}>
         <div className="left"></div>
         <div className="center">
-          <div className="link">home</div>
-          <div className="link">pages</div>
-          <div className="link">portfolios</div>
-          <div className="link">headers</div>
-          <div className="link">elements</div>
-          <div className="link">blog</div>
+          <div className="link">
+            <a href="#about">About</a>
+          </div>
+          <div className="link">
+            <a href="#events">Events</a>
+          </div>
+          <div className="link">
+            <a href="#social_media">Social Media</a>
+          </div>
+          <div className="link">
+            <a href="#team">Team</a>
+          </div>
+          <div className="link">
+            <a href="#contact">Contact</a>
+          </div>
         </div>
         <div className="right">
           <div className="icons"></div>
