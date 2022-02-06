@@ -7,6 +7,7 @@ import { CyberJunkSocialMedia } from '../components/CyberJunkSocialMedia';
 import { Navbar } from '../components/Navbar';
 import { Timeline } from '../components/Timeline';
 import Teams from '../components/Teams';
+import Contact from '../components/Contact';
 import { Sponsers } from '../components/Sponsers';
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -376,6 +377,9 @@ export default function Home() {
       </div>
       <div id="sponsers">
         <Sponsers />
+      </div>
+      <div id="Contact">
+        <Contact />
       </div>
       <style jsx>
         {`
