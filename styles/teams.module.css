@@ -18,8 +18,12 @@
   margin: 0px auto;
 }
 .toggleButton {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px 13px;
+  width: 90%;
+  margin: 15px auto;
+  /* justify-content: space-between; */
   border: none;
   color: whitesmoke;
 }
