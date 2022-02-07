@@ -1,7 +1,7 @@
-import sponsor1 from '../public/mmc.png';
-import sponsor2 from '../public/binance.png';
-import sponsor3 from '../public/mmc.png';
-import sponsor4 from '../public/mmc.png';
+import sponsor1 from '../public/mmc.webp';
+import sponsor2 from '../public/binance.webp';
+import sponsor3 from '../public/mmc.webp';
+import sponsor4 from '../public/mmc.webp';
 
 //this is the data about the sponsers, not just the names, but the links and images too...
 let sponsorNames = [

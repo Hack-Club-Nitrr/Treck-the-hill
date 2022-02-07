@@ -8,7 +8,7 @@ export const About = () => {
         <div className="content">
           <SimpleGrid minChildWidth="300px">
             <Box>
-              <img src="/about.png" alt="about" />
+              <img src="/about.webp" alt="about" />
             </Box>
             <Box>
               <h1 className="heading">ABOUT</h1>
