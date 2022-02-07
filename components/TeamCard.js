@@ -11,8 +11,15 @@ import { SimpleGrid, Box } from '@chakra-ui/react';
 
 const TeamCard = ({ delay, member }) => {
   return (
-    <div style={{ display: 'flex', marginBottom: '20px' }}>
-      <div style={{ width: '100px' }}>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        textAlign: 'center',
+        marginBottom: '20px',
+      }}
+    >
+      <div>
         <div className={styles.card}>
           <Tilt
             className="tilt"
@@ -34,7 +41,7 @@ const TeamCard = ({ delay, member }) => {
           <div className={styles.content}></div>
         </div>
       </div>
-      <div style={{ float: 'right', marginLeft: '20px' }}>
+      <div>
         <div className={styles.details}>
           <h2>
             {member.name}

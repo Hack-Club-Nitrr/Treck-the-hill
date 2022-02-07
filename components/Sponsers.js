@@ -14,7 +14,6 @@ export const Sponsers = () => {
     const cat1 = axios
       .get('https://trekthehill.herokuapp.com/api/sponser/')
       .then((response) => {
-        console.log(response);
         setSponsers(response.data);
 
         for (var i = 0; i < sponsers.length; i++) {
