@@ -114,7 +114,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.banner} ref={bannerRef}>
-        <img src="/banner.png" alt="banner" />
+        <img src="/banner.webp" alt="banner" />
       </div>
       {/* clouds */}
       <svg height="347" width="168" id="cloud1" className={styles.cloud1}>
@@ -358,7 +358,7 @@ export default function Home() {
         <use x="440" y="-15" href="#tree" transform="scale(1.2)" />
       </svg>
       <div className={styles.camp} ref={campRef}>
-        <img src="/camp.png" alt="camp" />
+        <img src="/camp.webp" alt="camp" />
       </div>
       <div style={{ height: '1800px' }} className="compensation"></div>
 
