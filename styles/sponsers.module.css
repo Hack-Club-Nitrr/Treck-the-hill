@@ -1,0 +1,59 @@
+.sponsers {
+  width: 80%;
+  max-width: 1300px;
+  margin: 20px auto;
+  padding: 40px 10px;
+}
+.diamond,
+.platinum,
+.bronze,
+.gold,
+.silver {
+  display: inline;
+  margin: 20px;
+}
+.diamond img {
+  height: 120px;
+}
+
+.platinum img {
+  height: 100px;
+}
+
+.gold img {
+  height: 90px;
+}
+.silver img {
+  height: 80px;
+}
+.bronze img {
+  height: 70px;
+}
+.spons_container {
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 32px;
+  text-align: center;
+  color: rgb(160, 200, 89);
+  display: block;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .spons_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .diamond,
+  .platinum,
+  .gold,
+  .silver,
+  .bronze {
+    margin: 20px auto;
+  }
+}

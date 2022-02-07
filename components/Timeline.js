@@ -12,7 +12,6 @@ export const Timeline = () => {
     axios
       .get('https://trekthehill.herokuapp.com/api/event/')
       .then((response) => {
-        console.log(response);
         setEvents(response.data);
       })
       .catch((error) => {});

@@ -14,30 +14,29 @@ export const About = () => {
               <h1 className="heading">ABOUT</h1>
               <br />
               <p>
-                The goal of Hack Club is to help you become a hacker. Being
-                entirely student led, this provides you the space to learn and
-                grow with the community. What is a Hack Club? The Hack Club is a
-                non-profit global network of young makers and student-led
-                programming clubs where young people create projects and thrive
-                to think big and make an impact with technology around the
-                world.
+                “Trek the hill 2022” brings an adventurous journey of 15 days
+                through its bootcamp where beginners can acquire ideas on how to
+                get started, providing access to learning materials, present
+                their unique ideas and abilities, and push their limits with
+                creativity and proficiency. We strive to make it a fun,
+                informative, and instructive experience.
               </p>
               <br />
               <p>
-                What is a Hack Club? The Hack Club is a non-profit global
-                network of young makers and student-led programming clubs where
-                young people create projects and thrive to think big and make an
-                impact with technology around the world. We at Hack Club NITRR!
-                🚀 Hack Club NITRR is a community where students from different
-                branches and domains can come together and tinker with various
-                new and upcoming techs. We aim to spread technical awareness
-                among students who are new to this field and are confused about
-                where to start.
+                Hack Club is a non-profit global network of young makers and
+                student-led programming clubs where young people create projects
+                and thrive to think big and make an impact with technology
+                around the world. We at Hack Club NITRR! 🚀 aim to spread
+                technical awareness among students who are new to this field and
+                are confused about where to start.
               </p>
-              
               <br />
               <p>
-              CyberJunk is a global initiative to promote international infosec research culture. The community provides free courses and uncountable infosec resources like roadmaps & tools. CyberJunk also conducts various live events and workshops to learn and sharpen cybersecurity skills.
+                CyberJunk is a global initiative to promote international
+                infosec research culture. The community provides free courses
+                and uncountable infosec resources like roadmaps & tools.
+                CyberJunk also conducts various live events and workshops to
+                learn and sharpen cybersecurity skills.
               </p>
               <br />
             </Box>
