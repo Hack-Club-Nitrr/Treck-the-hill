@@ -9,12 +9,8 @@ import {
 } from 'react-icons/ai';
 import { SimpleGrid, Box } from '@chakra-ui/react';
 
-import { Zoom } from 'react-awesome-reveal';
-
-const TeamCard = ({ delay, member }) => {
+const TeamCard = ({ member }) => {
   return (
-    
-    
     <Zoom delay={delay} triggerOnce>
      
       <div style={{ display: 'flex', marginBottom: '20px' }}>
@@ -35,43 +31,47 @@ const TeamCard = ({ delay, member }) => {
             </div>
             </Tilt>
             <div className={styles.content}></div>
+    <div style={{ display: 'flex', marginBottom: '20px' }}>
+      <div style={{ width: '100px' }}>
+        <div className={styles.card}>
+          <div className={styles.imgBox}>
+            <img src={member.image} />
           </div>
-        </div>
-        <div style={{ float: 'right', marginLeft: '20px' }}>
-          <div className={styles.details}>
-            <h2>
-              {member.name}
-              <br />
-              <span>{member.designation}</span>
-            </h2>
-            <ul className={styles.sci}>
-              <li>
-                <a href={member.facebook.length !== 0 ? member.facebook : '#'}>
-                  <AiFillFacebook />
-                </a>
-              </li>
-              <li>
-                <a href={member.linkedin.length !== 0 ? member.linkedin : '#'}>
-                  <AiFillLinkedin />
-                </a>
-              </li>
-              <li>
-                <a
-                  href={member.instagram.length !== 0 ? member.instagram : '#'}
-                >
-                  <AiOutlineInstagram />
-                </a>
-              </li>
-              <li>
-                <a href={member.email}>
-                  <AiOutlineMail />
-                </a>
-              </li>
-            </ul>
-          </div>
+          <div className={styles.content}></div>
         </div>
       </div>
-    </Zoom>
+      <div style={{ float: 'right', marginLeft: '20px' }}>
+        <div className={styles.details}>
+          <h2>
+            {member.name}
+            <br />
+            <span>{member.designation}</span>
+          </h2>
+          <ul className={styles.sci}>
+            <li>
+              <a href={member.facebook.length !== 0 ? member.facebook : '#'}>
+                <AiFillFacebook />
+              </a>
+            </li>
+            <li>
+              <a href={member.linkedin.length !== 0 ? member.linkedin : '#'}>
+                <AiFillLinkedin />
+              </a>
+            </li>
+            <li>
+              <a href={member.instagram.length !== 0 ? member.instagram : '#'}>
+                <AiOutlineInstagram />
+              </a>
+            </li>
+            <li>
+              <a href={member.email}>
+                <AiOutlineMail />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   );
 };
 export default TeamCard;
