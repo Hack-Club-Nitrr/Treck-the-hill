@@ -10,9 +10,17 @@ const Teams = () => {
   useEffect(() => {
     axios
       .get('https://trekthehill.herokuapp.com/api/team/')
-      .then((res) => setTeamsData(res.data))
+      .then((res) => {
+        setTeamsData(res.data);
+        console.log(res);
+      })
       .catch((err) => console.log(err.response));
-    setDisplayedTeam(teamsData.filter((member) => member.domain === 'lead'));
+  }, []);
+
+  useEffect(() => {
+    if (teamsData !== null) {
+      setDisplayedTeam(teamsData.filter((member) => member.domain === 'lead'));
+    }
   }, []);
   const handleClick = (e) => {
     setDisplayedTeam(
