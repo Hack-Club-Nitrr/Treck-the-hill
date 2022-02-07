@@ -9,6 +9,7 @@ import { Timeline } from '../components/Timeline';
 import Teams from '../components/Teams';
 import Contact from '../components/Contact';
 import { Sponsers } from '../components/Sponsers';
+import { Footer } from '../components/Footer';
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -365,21 +366,23 @@ export default function Home() {
       <div id="about">
         <About />
       </div>
-      <div id="social_media">
-        <CyberJunkSocialMedia />
-      </div>
+
       <div id="events">
         <Timeline />
       </div>
-      <div id="team">
-        <Teams />
+      <div id="social_media">
+        <CyberJunkSocialMedia />
       </div>
       <div id="sponsers">
         <Sponsers />
       </div>
+      <div id="team">
+        <Teams />
+      </div>
       <div id="contact">
         <Contact />
       </div>
+      <Footer />
       <style jsx>
         {`
           .background {
