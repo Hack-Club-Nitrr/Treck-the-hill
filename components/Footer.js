@@ -41,7 +41,7 @@ export const Footer = () => {
                 </a>
               </div>
               <div className={styles.pinkhover}>
-                <a href="/">
+                <a href="#contact">
                   <BsTwitter />
                 </a>
               </div>
