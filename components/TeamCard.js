@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../styles/teams.module.css';
+import Tilt from 'react-parallax-tilt'
 import {
   AiFillFacebook,
   AiFillLinkedin,
@@ -12,13 +13,27 @@ import { Zoom } from 'react-awesome-reveal';
 
 const TeamCard = ({ delay, member }) => {
   return (
+    
+    
     <Zoom delay={delay} triggerOnce>
+     
       <div style={{ display: 'flex', marginBottom: '20px' }}>
         <div style={{ width: '100px' }}>
           <div className={styles.card}>
+          <Tilt
+                  className="tilt"
+                  tiltMaxAngleX={20}
+                  tiltMaxAngleY={40}
+                  perspective={1000}
+                  transitionSpeed={1000}
+                  gyroscope={true}
+                  glareEnable={true} glareMaxOpacity={0.8} glareColor="#adb2b8"  glareBorderRadius="20px"
+                  scale={1.5}
+                  >
             <div className={styles.imgBox}>
               <img src={member.image} />
             </div>
+            </Tilt>
             <div className={styles.content}></div>
           </div>
         </div>
