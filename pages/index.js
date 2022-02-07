@@ -105,7 +105,6 @@ export default function Home() {
     }
   }, [scrollPosition]);
 
-  console.log(scrollPosition);
   return (
     <div className={styles.container}>
       <Stars />
