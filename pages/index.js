@@ -370,12 +370,13 @@ export default function Home() {
       <div id="events">
         <Timeline />
       </div>
-      <div id="social_media">
-        <CyberJunkSocialMedia />
-      </div>
       <div id="sponsers">
         <Sponsers />
       </div>
+      <div id="social_media">
+        <CyberJunkSocialMedia />
+      </div>
+
       <div id="team">
         <Teams />
       </div>
