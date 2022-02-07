@@ -13,19 +13,23 @@ export const About = () => {
             <Box>
               <h1 className="heading">ABOUT</h1>
               <br />
-
               <p>
-                What is a Hack Club? The Hack Club is a non-profit global
-                network of young makers and student-led programming clubs where
-                young people create projects and thrive to think big and make an
-                impact with technology around the world. We at Hack Club NITRR!
-                🚀 Hack Club NITRR is a community where students from different
-                branches and domains can come together and tinker with various
-                new and upcoming techs. We aim to spread technical awareness
-                among students who are new to this field and are confused about
-                where to start.
+                “Trek the hill 2022” brings an adventurous journey of 15 days
+                through its bootcamp where beginners can acquire ideas on how to
+                get started, providing access to learning materials, present
+                their unique ideas and abilities, and push their limits with
+                creativity and proficiency. We strive to make it a fun,
+                informative, and instructive experience.
               </p>
-
+              <br />
+              <p>
+                Hack Club is a non-profit global network of young makers and
+                student-led programming clubs where young people create projects
+                and thrive to think big and make an impact with technology
+                around the world. We at Hack Club NITRR! 🚀 aim to spread
+                technical awareness among students who are new to this field and
+                are confused about where to start.
+              </p>
               <br />
               <p>
                 CyberJunk is a global initiative to promote international
