@@ -19,27 +19,39 @@ const TeamCard = ({ delay, member }) => {
         marginBottom: '20px',
       }}
     >
-      <div>
-        <div className={styles.card}>
+      <div
+
+      style={{
+        display: 'flex',
+        justifyContent : 'center',
+      }}
+      
+      >
+        
           <Tilt
+          style={{
+            width: 150,
+            height: 150
+            }}
             className="tilt"
             tiltMaxAngleX={20}
             tiltMaxAngleY={40}
             perspective={1000}
             transitionSpeed={1000}
-            gyroscope={true}
+            gyroscope={false}
             glareEnable={true}
             glareMaxOpacity={0.8}
             glareColor="#adb2b8"
-            glareBorderRadius="20px"
-            scale={1.5}
+            glareBorderRadius="500px"
+            scale={1.1}
           >
+        <div className={styles.card}>
             <div className={styles.imgBox}>
               <img src={member.image} />
             </div>
-          </Tilt>
           <div className={styles.content}></div>
         </div>
+          </Tilt>
       </div>
       <div>
         <div className={styles.details}>
