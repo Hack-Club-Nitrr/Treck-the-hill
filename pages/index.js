@@ -377,7 +377,7 @@ export default function Home() {
       <div id="sponsers">
         <Sponsers />
       </div>
-      <div id="Contact">
+      <div id="contact">
         <Contact />
       </div>
       <style jsx>
