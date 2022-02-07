@@ -6,6 +6,8 @@ import {
   BsInstagram,
   BsPinterest,
   BsDribbble,
+  BsLinkedin,
+  BsDiscord,
 } from 'react-icons/bs';
 export const Footer = () => {
   return (
@@ -24,19 +26,24 @@ export const Footer = () => {
             />
             <div className={styles.icon_cont}>
               <div className={styles.pinkhover}>
-                <BsFacebook />
+                <a href="https://www.linkedin.com/company/hack-club-nitrr/about/">
+                  <BsLinkedin />
+                </a>
               </div>
               <div className={styles.pinkhover}>
-                <BsTwitter />
+                <a href="https://discord.gg/7mtF8tkt">
+                  <BsDiscord />
+                </a>
               </div>
               <div className={styles.pinkhover}>
-                <BsInstagram />
+                <a href="https://www.instagram.com/hack_club_nitrr/">
+                  <BsInstagram />
+                </a>
               </div>
               <div className={styles.pinkhover}>
-                <BsPinterest />
-              </div>
-              <div className={styles.pinkhover}>
-                <BsDribbble />
+                <a href="/">
+                  <BsTwitter />
+                </a>
               </div>
             </div>
           </div>
@@ -49,19 +56,24 @@ export const Footer = () => {
 
             <div className={styles.icon_cont}>
               <div className={styles.pinkhover}>
-                <BsFacebook />
+                <a href="https://www.linkedin.com/company/cyber-junk">
+                  <BsLinkedin />
+                </a>
               </div>
               <div className={styles.pinkhover}>
-                <BsTwitter />
+                <a href="https://discord.gg/ZmCmkw2enz">
+                  <BsDiscord />
+                </a>
               </div>
               <div className={styles.pinkhover}>
-                <BsInstagram />
+                <a href="https://www.instagram.com/cyber.junk_/">
+                  <BsInstagram />
+                </a>
               </div>
               <div className={styles.pinkhover}>
-                <BsPinterest />
-              </div>
-              <div className={styles.pinkhover}>
-                <BsDribbble />
+                <a href="https://twitter.com/CyberJunk_">
+                  <BsTwitter />
+                </a>
               </div>
             </div>
           </div>
