@@ -105,7 +105,6 @@ export default function Home() {
     }
   }, [scrollPosition]);
 
-  console.log(scrollPosition);
   return (
     <div className={styles.container}>
       <Stars />
@@ -378,7 +377,7 @@ export default function Home() {
       <div id="sponsers">
         <Sponsers />
       </div>
-      <div id="Contact">
+      <div id="contact">
         <Contact />
       </div>
       <style jsx>

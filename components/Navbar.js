@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRef } from 'react';
-import { BiAlignLeft } from 'react-icons/bi';
-import { GiCrossedAxes } from 'react-icons/gi';
+import { BiMenuAltRight } from 'react-icons/bi';
+import { AiOutlineClose } from 'react-icons/ai';
 import { useEffect, useState } from 'react';
 
 export const Navbar = () => {
@@ -43,22 +43,57 @@ export const Navbar = () => {
             closeMenu();
           }}
         >
-          <GiCrossedAxes size={40} />
+          <AiOutlineClose size={40} />
         </div>
         <div className="mo_link">
-          <a href="#about">About</a>
+          <a
+            href="#about"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
+            About
+          </a>
         </div>
         <div className="mo_link">
-          <a href="#events">Events</a>
+          <a
+            href="#events"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
+            Events
+          </a>
         </div>
         <div className="mo_link">
-          <a href="#social_media">Social Media</a>
+          <a
+            href="#social_media"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
+            Social Media
+          </a>
         </div>
         <div className="mo_link">
-          <a href="#team">Team</a>
+          <a
+            href="#team"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
+            Team
+          </a>
         </div>
         <div className="mo_link">
-          <a href="#contact">Contact</a>
+          <a
+            href="#contact"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
+            Contact
+          </a>
         </div>
       </div>
       <div className="topnav" id="topnav" ref={topnav}>
@@ -89,19 +124,20 @@ export const Navbar = () => {
               showMenu();
             }}
           >
-            <BiAlignLeft size={50} color="white" />
+            <BiMenuAltRight size={50} color="white" />
           </div>
         </div>
       </div>
 
       <style jsx>
         {`
+          @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
           .topnav {
             position: fixed;
             top: 0;
             left: 0;
             display: flex;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Comfortaa', cursive;
             z-index: 100;
             width: 100%;
             transition: 0.4s ease-out;
@@ -115,7 +151,7 @@ export const Navbar = () => {
             width: 60%;
             display: flex;
             justify-content: space-around;
-            text-transform: uppercase;
+
             font-weight: 700;
             padding: 20px 20px;
             color: rgb(37, 37, 37);
@@ -195,7 +231,8 @@ export const Navbar = () => {
               position: fixed;
               top: 0;
               left: 0;
-              background: black;
+              backdrop-filter: blur(12px);
+              background: rgba(0, 1, 53, 0.253);
               width: 100%;
               height: 100%;
               padding-top: 70px;
@@ -215,7 +252,7 @@ export const Navbar = () => {
               padding: 10px 20px;
               font-size: 20px;
               text-transform: capitalize;
-              border-bottom: 1px solid rgb(51, 51, 51);
+              // border-bottom: 1px solid rgba(0, 1, 153);
             }
           }
 
