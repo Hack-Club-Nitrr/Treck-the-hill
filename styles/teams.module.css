@@ -15,6 +15,7 @@
   /* border-radius: 20px; */
   padding: 40px 20px;
   letter-spacing: 1px;
+  margin: 0px auto;
 }
 .toggleButton {
   display: flex;
