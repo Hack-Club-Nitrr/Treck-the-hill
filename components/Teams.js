@@ -12,16 +12,11 @@ const Teams = () => {
       .get('https://trekthehill.herokuapp.com/api/team/')
       .then((res) => {
         setTeamsData(res.data);
-        console.log(res);
+        setDisplayedTeam(res.data.filter((member) => member.domain === 'lead'));
       })
       .catch((err) => console.log(err.response));
   }, []);
 
-  useEffect(() => {
-    if (teamsData !== null) {
-      setDisplayedTeam(teamsData.filter((member) => member.domain === 'lead'));
-    }
-  }, []);
   const handleClick = (e) => {
     setDisplayedTeam(
       teamsData.filter((member) => member.domain === e.target.name)
