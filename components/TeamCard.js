@@ -6,14 +6,15 @@ import {
   AiOutlineInstagram,
   AiOutlineMail,
 } from 'react-icons/ai';
+import { SimpleGrid, Box } from '@chakra-ui/react';
 
 import { Zoom } from 'react-awesome-reveal';
 
 const TeamCard = ({ delay, member }) => {
   return (
     <Zoom delay={delay} triggerOnce>
-      <div className={styles.card_column}>
-        <div className={styles.card_col_1}>
+      <div style={{ display: 'flex', marginBottom: '20px' }}>
+        <div style={{ width: '100px' }}>
           <div className={styles.card}>
             <div className={styles.imgBox}>
               <img src={member.image} />
@@ -21,7 +22,7 @@ const TeamCard = ({ delay, member }) => {
             <div className={styles.content}></div>
           </div>
         </div>
-        <div className={styles.card_col_2}>
+        <div style={{ float: 'right', marginLeft: '20px' }}>
           <div className={styles.details}>
             <h2>
               {member.name}

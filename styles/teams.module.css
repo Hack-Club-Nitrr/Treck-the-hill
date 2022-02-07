@@ -58,7 +58,6 @@
   width: 100px;
   height: 100px;
   z-index: 3;
-  background: #fff;
   border-radius: 50px;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(15px);
@@ -66,24 +65,10 @@
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
-.card_column {
-  display: flex;
-  width: 100%;
-  position: relative;
-  margin: 10px 0px;
-}
 
-.card_col_1 {
-  width: 20%;
-}
-.card_col_2 {
-  width: 80%;
-  margin-left: 20%;
-}
 .imgBox {
-  width: 20%;
-  height: 100%;
-  overflow: hidden;
+  width: 100px;
+  height: 100px;
   border-radius: 10px;
   /* transform: translateY(30px) scale(0.5); */
   /* transform-origin: top; */
@@ -110,7 +95,10 @@
 .details {
   height: fit-content;
   width: 100%;
-  margin-left: -20px;
+  margin-left: 0px;
+}
+.css-0 {
+  width: 100px !important;
 }
 
 .details h2 {
