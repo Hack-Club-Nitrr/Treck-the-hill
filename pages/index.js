@@ -97,12 +97,14 @@ export default function Home() {
       baseRef.current.style.transform = `scale(1.5)`;
     } else {
       baseRef.current.style.opacity = `${2 - scrollPosition / 1100}`;
-      baseRef.current.style.transform = `scale(${2 + scrollPosition / 1100})`;
+      baseRef.current.style.transform = `scale(${1.5 + scrollPosition / 1100})`;
     }
     if (scrollPosition >= 500) {
       mountRef.current.style.transform = `translateY(${
         scrollPosition / 2 - 250
       }px)`;
+    } else {
+      mountRef.current.style.transform = `translateY(0px)`;
     }
   }, [scrollPosition]);
 
