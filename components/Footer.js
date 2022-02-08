@@ -14,7 +14,7 @@ export const Footer = () => {
     <div>
       <div className={styles.footer}>
         <div className={styles.tth}>
-          <img src="/trekthehill.svg" alt="logo" />
+          <img src="/trekthehill.png" alt="logo" />
           <h2>Trek The Hill 2022</h2>
         </div>
         <div className={styles.div_wrap}>

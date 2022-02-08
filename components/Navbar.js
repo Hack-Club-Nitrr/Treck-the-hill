@@ -118,14 +118,14 @@ export const Navbar = () => {
         <div className="right">
           <div className="icons"></div>
           <div className="icons"></div>
-          <div
-            className="icons toggleIcon "
-            onClick={() => {
-              showMenu();
-            }}
-          >
-            <BiMenuAltRight size={50} color="white" />
-          </div>
+        </div>
+        <div
+          className="toggleIcon "
+          onClick={() => {
+            showMenu();
+          }}
+        >
+          <BiMenuAltRight size={50} color="white" />
         </div>
       </div>
 
@@ -182,6 +182,14 @@ export const Navbar = () => {
           }
 
           @media screen and (max-width: 767px) {
+            .toggleIcon {
+              position: fixed;
+              top: 10px;
+              right: 10px;
+            }
+            .topnav {
+              backdrop-filter: none !important;
+            }
             .number {
               font-size: 90px;
               font-weight: 900;
@@ -203,21 +211,6 @@ export const Navbar = () => {
               text-shadow: 2px 2px 8px #ae00ff94;
             }
 
-            .herodesc {
-              color: rgb(255, 0, 0);
-              backdrop-filter: blur(2px);
-              font-weight: 600;
-              display: none;
-            }
-
-            .herobtn {
-              position: absolute;
-              left: 10%;
-              bottom: -140px;
-              padding: 10px 40px;
-              margin: 40px auto;
-              float: right;
-            }
             .center {
               display: none;
             }

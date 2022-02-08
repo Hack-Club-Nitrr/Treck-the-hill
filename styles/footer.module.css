@@ -5,11 +5,12 @@
   color: white;
   width: 100%;
   margin: 0;
-  background-color: rgba(0, 16, 51, 0.479);
+  background-color: rgba(0, 16, 51, 0.637);
   backdrop-filter: blur(2px);
   text-align: center;
   padding: 10px 20px;
 }
+
 .div_wrap {
   width: 100%;
   display: flex;
@@ -60,5 +61,21 @@
   }
   .col2 {
     width: 100%;
+  }
+  .tth {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 26px;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 60px;
+    padding: 20px;
+  }
+  .tth img {
+    margin: 0px auto;
+  }
+  .footer {
+    background-color: rgba(30, 101, 255, 0.637);
   }
 }
