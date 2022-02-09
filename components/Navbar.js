@@ -67,6 +67,26 @@ export const Navbar = () => {
         </div>
         <div className="mo_link">
           <a
+            href="#speakers"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
+           Speakers
+          </a>
+        </div>
+        <div className="mo_link">
+          <a
+            href="#sponsers"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
+            Sponsors
+          </a>
+        </div>
+        <div className="mo_link">
+          <a
             href="#social_media"
             onClick={() => {
               closeMenu();
@@ -104,6 +124,12 @@ export const Navbar = () => {
           </div>
           <div className="link">
             <a href="#events">Events</a>
+          </div>
+          <div className="link">
+            <a href="#speakers">Speakers</a>
+          </div>
+          <div className="link">
+            <a href="#sponsers">Sponsors</a>
           </div>
           <div className="link">
             <a href="#social_media">Social Media</a>
