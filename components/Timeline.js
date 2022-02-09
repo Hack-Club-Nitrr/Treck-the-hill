@@ -23,7 +23,7 @@ export const Timeline = () => {
       <div className={styles.timeline_container}>
         <h1
           className="heading"
-          style={{ fontSize: '28px', marginBottom: '30px' }}
+          style={{ fontSize: '24px', marginBottom: '30px' }}
         >
           Event Timeline
         </h1>
