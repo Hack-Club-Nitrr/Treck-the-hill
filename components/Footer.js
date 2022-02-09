@@ -14,16 +14,18 @@ export const Footer = () => {
     <div>
       <div className={styles.footer}>
         <div className={styles.tth}>
-          <img src="/trekthehill.png" alt="logo" />
+          <a href="https://www.trekthehill.co/">  <img src="/trekthehill.png" alt="logo" /> </a>
           <h2>Trek The Hill 2022</h2>
         </div>
         <div className={styles.div_wrap}>
           <div className={styles.col1}>
+          <a href="https://hack-club-nitrr.netlify.app/">
             <img
               src="/hackclub.png"
               style={{ width: '60px', margin: '10px auto' }}
               alt="logo"
             />
+         </a>
             <div className={styles.icon_cont}>
               <div className={styles.pinkhover}>
                 <a href="https://www.linkedin.com/company/hack-club-nitrr/about/">
@@ -48,11 +50,13 @@ export const Footer = () => {
             </div>
           </div>
           <div className={styles.col2}>
+          <a href="https://cyberjunk.co/">
             <img
               src="/cyberjunk.png"
               alt="logo"
               style={{ width: '60px', margin: '10px auto' }}
             />
+          </a>
 
             <div className={styles.icon_cont}>
               <div className={styles.pinkhover}>
