@@ -23,7 +23,6 @@ const Speaker = () => {
           }
         }
         setDisplayedSpeaker(speakers);
-        console.log(speakers);
       })
       .catch((err) => console.log(err.response));
   }, []);
