@@ -10,6 +10,7 @@ import Teams from '../components/Teams';
 import Contact from '../components/Contact';
 import { Sponsers } from '../components/Sponsers';
 import { Footer } from '../components/Footer';
+import Speaker from '../components/Speaker';
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -367,6 +368,10 @@ export default function Home() {
 
       <div id="about">
         <About />
+      </div>
+
+      <div id="speakers">
+        <Speaker/>
       </div>
 
       <div id="events">

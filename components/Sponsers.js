@@ -46,7 +46,7 @@ export const Sponsers = () => {
       <br />
       <br />
       <div className={styles.heading}>
-        <p>Our Sponsers</p>
+        <p>Our Sponsors</p>
         <br />
       </div>
       <div className={styles.spons_container}>
