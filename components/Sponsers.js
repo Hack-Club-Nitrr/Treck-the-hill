@@ -55,6 +55,7 @@ export const Sponsers = () => {
             <div className={styles.diamond} key={sponser.name}>
               <a href={sponser.link}>
                 <img src={sponser.image} alt={sponser.name} />
+                <div className={styles.spons_name}>{sponser.name}</div>
               </a>
             </div>
           );

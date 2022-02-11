@@ -3,6 +3,8 @@
   max-width: 1300px;
   margin: 20px auto;
   padding: 40px 10px;
+  z-index: 100;
+  backdrop-filter: blur(1px);
 }
 .diamond,
 .platinum,
@@ -10,24 +12,25 @@
 .gold,
 .silver {
   display: inline;
-  margin: 20px;
+  margin: 0px;
 }
 .diamond img {
-  height: 120px;
+  height: 200px;
+  margin-right: 0 !important;
 }
 
 .platinum img {
-  height: 100px;
+  height: 160px;
 }
 
 .gold img {
-  height: 90px;
+  height: 140px;
 }
 .silver img {
-  height: 80px;
+  height: 120px;
 }
 .bronze img {
-  height: 70px;
+  height: 100px;
 }
 .spons_container {
   display: flex;
@@ -42,7 +45,11 @@
   display: block;
   width: 100%;
 }
-
+.spons_name {
+  color: white;
+  text-align: center;
+  width: 100%;
+}
 @media screen and (max-width: 767px) {
   .spons_container {
     display: flex;
@@ -54,6 +61,6 @@
   .gold,
   .silver,
   .bronze {
-    margin: 20px auto;
+    margin: 0px auto;
   }
 }
