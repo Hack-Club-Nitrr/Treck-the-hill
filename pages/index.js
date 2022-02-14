@@ -106,8 +106,8 @@ export default function Home() {
     <div className={styles.container}>
       <Stars />
       <Head>
-        <title>Treck The Hill</title>
-        <meta name="description" content="Treck the Hill" />
+        <title>Trek The Hill</title>
+        <meta name="description" content="Trek the Hill" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.banner} ref={bannerRef}>
