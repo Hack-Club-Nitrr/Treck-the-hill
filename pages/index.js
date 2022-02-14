@@ -9,8 +9,9 @@ import { Timeline } from '../components/Timeline';
 import Teams from '../components/Teams';
 import Contact from '../components/Contact';
 import { Sponsers } from '../components/Sponsers';
-import { Footer } from '../components/Footer';
+import Footer from '../components/Footer';
 import Speaker from '../components/Speaker';
+import FAQs from '../components/FAQ';
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -50,30 +51,25 @@ export default function Home() {
       tree2Ref.current.style.display = 'block';
       tree3Ref.current.style.display = 'block';
     }
-    bannerRef.current.style.transform = `translateY(${
-      -0.6 * scrollPosition
-    }px) scale(1)`;
+    bannerRef.current.style.transform = `translateY(${-0.6 * scrollPosition
+      }px) scale(1)`;
     if (scrollPosition < 630) {
       tree1Ref.current.style.opacity = '1';
       tree1Ref.current.style.transform = `scale(2)`;
     } else {
       tree1Ref.current.style.opacity = `${2 - scrollPosition / 630}`;
-      tree1Ref.current.style.transform = `scale(${
-        1 + scrollPosition / 630
-      }) translate(${315 - 0.5 * scrollPosition}px,${
-        -252 + 0.4 * scrollPosition
-      }px)`;
+      tree1Ref.current.style.transform = `scale(${1 + scrollPosition / 630
+        }) translate(${315 - 0.5 * scrollPosition}px,${-252 + 0.4 * scrollPosition
+        }px)`;
     }
     if (scrollPosition < 700) {
       tree2Ref.current.style.opacity = '1';
       tree2Ref.current.style.transform = `scale(2)`;
     } else {
       tree2Ref.current.style.opacity = `${2 - scrollPosition / 700}`;
-      tree2Ref.current.style.transform = `scale(${
-        1 + scrollPosition / 700
-      }) translate(${350 - 0.5 * scrollPosition}px,${
-        -280 + 0.4 * scrollPosition
-      }px)`;
+      tree2Ref.current.style.transform = `scale(${1 + scrollPosition / 700
+        }) translate(${350 - 0.5 * scrollPosition}px,${-280 + 0.4 * scrollPosition
+        }px)`;
     }
     if (scrollPosition < 700) {
       campRef.current.style.opacity = '1';
@@ -87,11 +83,9 @@ export default function Home() {
       tree3Ref.current.style.transform = `scale(2)`;
     } else {
       tree3Ref.current.style.opacity = `${2 - scrollPosition / 700}`;
-      tree3Ref.current.style.transform = `scale(${
-        1 + scrollPosition / 700
-      }) translate(${-350 + 0.5 * scrollPosition}px,${
-        -280 + 0.4 * scrollPosition
-      }px)`;
+      tree3Ref.current.style.transform = `scale(${1 + scrollPosition / 700
+        }) translate(${-350 + 0.5 * scrollPosition}px,${-280 + 0.4 * scrollPosition
+        }px)`;
     }
     if (scrollPosition < 1100) {
       baseRef.current.style.opacity = '1';
@@ -101,9 +95,8 @@ export default function Home() {
       baseRef.current.style.transform = `scale(${1.5 + scrollPosition / 1100})`;
     }
     if (scrollPosition >= 500) {
-      mountRef.current.style.transform = `translateY(${
-        scrollPosition / 2 - 250
-      }px)`;
+      mountRef.current.style.transform = `translateY(${scrollPosition / 2 - 250
+        }px)`;
     } else {
       mountRef.current.style.transform = `translateY(0px)`;
     }
@@ -371,7 +364,7 @@ export default function Home() {
       </div>
 
       <div id="speakers">
-        <Speaker/>
+        <Speaker />
       </div>
 
       <div id="events">
@@ -390,6 +383,7 @@ export default function Home() {
       <div id="contact">
         <Contact />
       </div>
+      <FAQs />
       <Footer />
       <style jsx>
         {`
