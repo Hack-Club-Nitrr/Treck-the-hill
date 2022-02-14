@@ -13,15 +13,18 @@ import {
 
 const FAQ_DATA = [
     {
+        id: 1,
         question: "Who can participate in the hackathon?",
         answer:
             "Everyone is welcome to apply, be it students, professionals or turing-test certified androids. As long as you wish to learn something, we'll be waiting to see you. If you are under 18 years of age, we’ll need a parental consent form.",
     },
     {
+        id: 2,
         question: "Are there any fees to participate?",
         answer: "Nope. Trek The Hill is free of cost and open for all.",
     },
     {
+        id: 3,
         question: "Do I need a team?",
         answer: (
             <>
@@ -31,6 +34,7 @@ const FAQ_DATA = [
         ),
     },
     {
+        id: 4,
         question: "What if I don't have a team?",
         answer: (
             <>
@@ -47,6 +51,7 @@ const FAQ_DATA = [
         ),
     },
     {
+        id: 5,
         question: "Can I bring a project that was built earlier?",
         answer:
             "We apologize, but all the hackathon's projects should be developed during the event from scratch. All hackers will be strictly monitored for any kind of plagiarism or cheating.",
@@ -74,8 +79,8 @@ export default function FAQs() {
                 Frequently asked questions
             </Heading>
             <Accordion allowToggle allowMultiple>
-                {FAQ_DATA.map(({ question, answer }) => (
-                    <FAQItem question={question} answer={answer} />
+                {FAQ_DATA.map(({ question, answer, id }) => (
+                    <FAQItem key={id} question={question} answer={answer} />
                 ))}
             </Accordion>
         </Container>
