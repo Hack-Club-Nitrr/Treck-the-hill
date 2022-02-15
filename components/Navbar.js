@@ -113,7 +113,7 @@ export const Navbar = () => {
               closeMenu();
             }}
           >
-            FAQ's
+            FAQ&apos;s
           </a>
         </div>
       </div>
@@ -139,7 +139,7 @@ export const Navbar = () => {
             <a href="#contact">Contact</a>
           </div>
           <div className="link">
-            <a href="#faq">FAQ's</a>
+            <a href="#faq">FAQ&apos;s</a>
           </div>
         </div>
         <div className="right">
