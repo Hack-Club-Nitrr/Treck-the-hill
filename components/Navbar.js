@@ -72,7 +72,7 @@ export const Navbar = () => {
               closeMenu();
             }}
           >
-           Speakers
+            Speakers
           </a>
         </div>
         <div className="mo_link">
@@ -85,16 +85,7 @@ export const Navbar = () => {
             Sponsors
           </a>
         </div>
-        <div className="mo_link">
-          <a
-            href="#social_media"
-            onClick={() => {
-              closeMenu();
-            }}
-          >
-            Social Media
-          </a>
-        </div>
+
         <div className="mo_link">
           <a
             href="#team"
@@ -115,6 +106,16 @@ export const Navbar = () => {
             Contact
           </a>
         </div>
+        <div className="mo_link">
+          <a
+            href="#faq"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
+            FAQ's
+          </a>
+        </div>
       </div>
       <div className="topnav" id="topnav" ref={topnav}>
         <div className="left"></div>
@@ -132,13 +133,13 @@ export const Navbar = () => {
             <a href="#sponsers">Sponsors</a>
           </div>
           <div className="link">
-            <a href="#social_media">Social Media</a>
-          </div>
-          <div className="link">
             <a href="#team">Team</a>
           </div>
           <div className="link">
             <a href="#contact">Contact</a>
+          </div>
+          <div className="link">
+            <a href="#faq">FAQ's</a>
           </div>
         </div>
         <div className="right">
@@ -158,6 +159,8 @@ export const Navbar = () => {
       <style jsx>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
           .topnav {
             position: fixed;
             top: 0;
@@ -197,7 +200,7 @@ export const Navbar = () => {
           .link:hover {
             border-bottom: #4dff00;
             margin-top: -2px;
-            color: rgb(160, 200, 89);
+            color: rgb(26 188 156);
           }
           .icons {
             padding: 0px 15px;

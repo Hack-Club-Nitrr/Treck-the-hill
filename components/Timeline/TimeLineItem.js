@@ -2,6 +2,7 @@ import React from 'react';
 import NumberBar from './NumberBar';
 import { Fade } from 'react-awesome-reveal';
 import styles from '../../styles/timeline.module.css';
+import moment from 'moment';
 
 const TimeLineItem = ({ data, id }) => {
   return (
@@ -15,11 +16,13 @@ const TimeLineItem = ({ data, id }) => {
           className={styles.timeline_image}
         />
         <h1 className={styles.timeline_heading}>
-          <div style={{ backgroundColor: 'green' }}></div>
-          <p>{data.date}</p>
+          <p>{moment(data.date).format('MMMM Do YYYY, h:mm:ss a')}</p>
         </h1>
 
-        <p className={styles.timeline_topic} style={{ color: 'green' }}>
+        <p
+          className={styles.timeline_topic}
+          style={{ color: 'rgb(0, 247, 255)' }}
+        >
           {data.title}
         </p>
         <p className={styles.timeline_para}>{data.description}</p>

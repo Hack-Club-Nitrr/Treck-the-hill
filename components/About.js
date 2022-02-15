@@ -11,7 +11,7 @@ export const About = () => {
               <img src="/about.png" alt="about" />
             </Box>
             <Box>
-              <h1 className="heading">ABOUT</h1>
+              <h1 className="heading">About</h1>
               <br />
               <p>
                 “Trek the hill 2022” brings an adventurous journey of 15 days
@@ -48,11 +48,15 @@ export const About = () => {
         {`
           @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
           @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Lemonada&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
           .heading {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 40px;
-            color: rgb(160, 200, 89);
+            font-family: 'Nova Mono', monospace;
+            font-size: 34px;
+            color: rgb(26 188 156);
             text-align: center;
+            text-shadow: 0 0 10px rgb(26 188 156);
           }
           .content_container {
             display: flex;

@@ -23,7 +23,7 @@ export const Timeline = () => {
       <div className={styles.timeline_container}>
         <h1
           className="heading"
-          style={{ fontSize: '24px', marginBottom: '30px' }}
+          style={{ fontSize: '34px', marginBottom: '30px' }}
         >
           Event Timeline
         </h1>
@@ -37,11 +37,15 @@ export const Timeline = () => {
       </div>
       <style jsx>
         {`
+          @import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
           .heading {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 40px;
-            color: rgb(160, 200, 89);
             text-align: center;
+            font-family: 'Nova Mono', monospace;
+            font-size: 34px;
+            color: rgb(26 188 156);
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgb(26 188 156);
           }
         `}
       </style>
