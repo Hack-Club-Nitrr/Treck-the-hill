@@ -79,7 +79,7 @@ const FAQItem = ({ question, answer }) => (
 export default function FAQs() {
   return (
     <div>
-      <Container py="20" maxW="container.lg" zIndex="100" color={'white'}>
+      <Container py="20" maxW="container.lg" zIndex="300" color={'white'}>
         <div className="heading">Frequently asked questions</div>
         <Accordion allowToggle allowMultiple>
           {FAQ_DATA.map(({ question, answer, id }) => (
