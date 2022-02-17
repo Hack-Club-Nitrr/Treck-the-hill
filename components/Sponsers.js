@@ -105,6 +105,7 @@ export const Sponsers = () => {
           <a
             href="https://drive.google.com/file/d/17nr2ZE9PIsTD7w2yxUtr6fydVf1vDE4Y/view"
             target="_blank"
+            rel="noreferrer"
           >
             <FiDownload styles={{ marginTop: '7px' }} />
           </a>
