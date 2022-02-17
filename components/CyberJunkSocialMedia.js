@@ -5,8 +5,6 @@ import Head from 'next/head';
 export const CyberJunkSocialMedia = () => {
   return (
     <div className="container">
-    
-
       <Head>
         {/* cyber junk script */}
         <script type="text/javascript">
@@ -25,14 +23,11 @@ export const CyberJunkSocialMedia = () => {
           })()`}
         </script>
       </Head>
-      
+
       <div className="content_container">
         <div className="content">
-          <div
-            className="heading"
-            style={{ fontSize: '20px', padding: '40px 20px' }}
-          >
-            OUR ONLINE PRESENCE
+          <div className="heading" style={{ padding: '40px 20px' }}>
+            Our Online Presence
           </div>
 
           <div id="curator-feed-default-feed-layout" style={{ color: 'white' }}>
@@ -56,15 +51,18 @@ export const CyberJunkSocialMedia = () => {
       <br />
       <style jsx>
         {`
-          .container{
+          @import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
+          .container {
             position: relative;
-            z-index:99;
+            z-index: 99;
           }
           .heading {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 40px;
-            color: rgb(160, 200, 89);
+            font-family: 'Nova Mono', monospace;
+            font-size: 32px;
+            color: rgb(26 188 156);
             text-align: center;
+            text-shadow: 0 0 10px rgb(26 188 156);
           }
           .content_container {
             display: flex;
@@ -88,7 +86,6 @@ export const CyberJunkSocialMedia = () => {
               padding: 20px;
             }
           }
-
         `}
       </style>
     </div>

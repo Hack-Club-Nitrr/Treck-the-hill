@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
+.sponsers {
+  width: 80%;
+  max-width: 1300px;
+  margin: 20px auto;
+  padding: 40px 10px;
+  z-index: 100;
+  backdrop-filter: blur(1px);
+}
+.diamond,
+.platinum,
+.bronze,
+.gold,
+.silver {
+  display: inline;
+  margin: 20px;
+}
+.diamond img {
+  height: 200px;
+  margin-right: 0 !important;
+}
+
+.platinum img {
+  height: 160px;
+}
+
+.gold img {
+  height: 140px;
+}
+.silver img {
+  height: 120px;
+}
+.bronze img {
+  height: 100px;
+}
+.spons_container {
+  display: flex;
+  justify-content: center;
+}
+
+.heading {
+  text-align: center;
+  font-family: 'Nova Mono', monospace;
+  font-size: 34px;
+  color: rgb(26 188 156);
+  text-align: center;
+  display: block;
+  width: 100%;
+  text-shadow: 0 0 10px rgb(26 188 156);
+}
+.spons_name {
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .spons_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .diamond,
+  .platinum,
+  .gold,
+  .silver,
+  .bronze {
+    margin: 0px auto;
+  }
+}

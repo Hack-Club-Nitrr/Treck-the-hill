@@ -67,14 +67,25 @@ export const Navbar = () => {
         </div>
         <div className="mo_link">
           <a
-            href="#social_media"
+            href="#speakers"
             onClick={() => {
               closeMenu();
             }}
           >
-            Social Media
+            Speakers
           </a>
         </div>
+        <div className="mo_link">
+          <a
+            href="#sponsers"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
+            Sponsors
+          </a>
+        </div>
+
         <div className="mo_link">
           <a
             href="#team"
@@ -95,6 +106,16 @@ export const Navbar = () => {
             Contact
           </a>
         </div>
+        <div className="mo_link">
+          <a
+            href="#faq"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
+            FAQ&apos;s
+          </a>
+        </div>
       </div>
       <div className="topnav" id="topnav" ref={topnav}>
         <div className="left"></div>
@@ -106,7 +127,10 @@ export const Navbar = () => {
             <a href="#events">Events</a>
           </div>
           <div className="link">
-            <a href="#social_media">Social Media</a>
+            <a href="#speakers">Speakers</a>
+          </div>
+          <div className="link">
+            <a href="#sponsers">Sponsors</a>
           </div>
           <div className="link">
             <a href="#team">Team</a>
@@ -114,24 +138,29 @@ export const Navbar = () => {
           <div className="link">
             <a href="#contact">Contact</a>
           </div>
+          <div className="link">
+            <a href="#faq">FAQ&apos;s</a>
+          </div>
         </div>
         <div className="right">
           <div className="icons"></div>
           <div className="icons"></div>
-          <div
-            className="icons toggleIcon "
-            onClick={() => {
-              showMenu();
-            }}
-          >
-            <BiMenuAltRight size={50} color="white" />
-          </div>
+        </div>
+        <div
+          className="toggleIcon "
+          onClick={() => {
+            showMenu();
+          }}
+        >
+          <BiMenuAltRight size={50} color="white" />
         </div>
       </div>
 
       <style jsx>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
           .topnav {
             position: fixed;
             top: 0;
@@ -171,7 +200,7 @@ export const Navbar = () => {
           .link:hover {
             border-bottom: #4dff00;
             margin-top: -2px;
-            color: rgb(160, 200, 89);
+            color: rgb(26 188 156);
           }
           .icons {
             padding: 0px 15px;
@@ -182,6 +211,14 @@ export const Navbar = () => {
           }
 
           @media screen and (max-width: 767px) {
+            .toggleIcon {
+              position: fixed;
+              top: 10px;
+              right: 10px;
+            }
+            .topnav {
+              backdrop-filter: none !important;
+            }
             .number {
               font-size: 90px;
               font-weight: 900;
@@ -203,21 +240,6 @@ export const Navbar = () => {
               text-shadow: 2px 2px 8px #ae00ff94;
             }
 
-            .herodesc {
-              color: rgb(255, 0, 0);
-              backdrop-filter: blur(2px);
-              font-weight: 600;
-              display: none;
-            }
-
-            .herobtn {
-              position: absolute;
-              left: 10%;
-              bottom: -140px;
-              padding: 10px 40px;
-              margin: 40px auto;
-              float: right;
-            }
             .center {
               display: none;
             }

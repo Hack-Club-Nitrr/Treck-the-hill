@@ -9,6 +9,9 @@ import { Timeline } from '../components/Timeline';
 import Teams from '../components/Teams';
 import Contact from '../components/Contact';
 import { Sponsers } from '../components/Sponsers';
+import Footer from '../components/Footer';
+import Speaker from '../components/Speaker';
+import FAQs from '../components/FAQ';
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -96,12 +99,14 @@ export default function Home() {
       baseRef.current.style.transform = `scale(1.5)`;
     } else {
       baseRef.current.style.opacity = `${2 - scrollPosition / 1100}`;
-      baseRef.current.style.transform = `scale(${2 + scrollPosition / 1100})`;
+      baseRef.current.style.transform = `scale(${1.5 + scrollPosition / 1100})`;
     }
     if (scrollPosition >= 500) {
       mountRef.current.style.transform = `translateY(${
         scrollPosition / 2 - 250
       }px)`;
+    } else {
+      mountRef.current.style.transform = `translateY(0px)`;
     }
   }, [scrollPosition]);
 
@@ -109,8 +114,8 @@ export default function Home() {
     <div className={styles.container}>
       <Stars />
       <Head>
-        <title>Treck The Hill</title>
-        <meta name="description" content="Treck the Hill" />
+        <title>Trek The Hill</title>
+        <meta name="description" content="Trek the Hill" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.banner} ref={bannerRef}>
@@ -365,21 +370,31 @@ export default function Home() {
       <div id="about">
         <About />
       </div>
-      <div id="social_media">
-        <CyberJunkSocialMedia />
+
+      <div id="speakers">
+        <Speaker />
       </div>
+
       <div id="events">
         <Timeline />
-      </div>
-      <div id="team">
-        <Teams />
       </div>
       <div id="sponsers">
         <Sponsers />
       </div>
+      <div id="social_media">
+        <CyberJunkSocialMedia />
+      </div>
+
+      <div id="team">
+        <Teams />
+      </div>
       <div id="contact">
         <Contact />
       </div>
+      <div id="faq">
+        <FAQs />
+      </div>
+      <Footer />
       <style jsx>
         {`
           .background {
