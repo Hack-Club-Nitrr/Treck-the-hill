@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { SimpleGrid, Box } from '@chakra-ui/react';
+import { FiDownload } from 'react-icons/fi';
 import styles from '../styles/sponsers.module.css';
 
 export const Sponsers = () => {
@@ -97,6 +98,17 @@ export const Sponsers = () => {
             </div>
           );
         })}
+      </div>
+      <div className={styles.btn_container}>
+        <h4>Click here to download our Sponsorship Brochure</h4>
+        <button className={styles.btn}>
+          <a
+            href="https://drive.google.com/file/d/17nr2ZE9PIsTD7w2yxUtr6fydVf1vDE4Y/view"
+            target="_blank"
+          >
+            <FiDownload styles={{ marginTop: '7px' }} />
+          </a>
+        </button>
       </div>
     </div>
   );
