@@ -72,7 +72,7 @@ const Teams = () => {
               displayedTeam[0].domain === 'sponsership' && styles.buttonBorder
             } ${styles.btn}`}
           >
-            SPONSERSHIP
+            SPONSORSHIP
           </button>
         </div>
       )}

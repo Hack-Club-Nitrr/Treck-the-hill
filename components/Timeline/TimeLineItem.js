@@ -26,6 +26,10 @@ const TimeLineItem = ({ data, id }) => {
           {data.title}
         </p>
         <p className={styles.timeline_para}>{data.description}</p>
+        {/* <p
+          className={styles.timeline_para}
+          dangerouslySetInnerHTML={{ __html: data.description }}
+        /> */}
       </div>
       {/* </div> */}
     </Fade>
