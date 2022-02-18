@@ -4,6 +4,7 @@ import { timeLineData } from '../components/Timeline/timeLineData';
 import TimeLineItem from '../components/Timeline/TimeLineItem';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
+import moment from 'moment';
 
 export const Timeline = () => {
   const [events, setEvents] = useState([]);
@@ -12,7 +13,14 @@ export const Timeline = () => {
     axios
       .get('https://trekthehill.herokuapp.com/api/event/')
       .then((response) => {
-        setEvents(response.data);
+        var temp = [];
+        response.data.sort((a, b) => {
+          return moment(a.date).unix() - moment(b.date).unix();
+        });
+        response.data.forEach((e) => {
+          temp.push(e);
+        });
+        setEvents(temp);
       })
       .catch((error) => {});
   }, []);
