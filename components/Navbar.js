@@ -22,6 +22,14 @@ export const Navbar = () => {
     } else {
       topnav.current.style.backdropFilter = ' blur(10px)';
     }
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
   }, [scrollPosition]);
   const momenu = useRef(null);
 
@@ -77,7 +85,7 @@ export const Navbar = () => {
         </div>
         <div className="mo_link">
           <a
-            href="#sponsers"
+            href="#sponsors"
             onClick={() => {
               closeMenu();
             }}
@@ -118,7 +126,15 @@ export const Navbar = () => {
         </div>
       </div>
       <div className="topnav" id="topnav" ref={topnav}>
-        <div className="left"></div>
+        <div className="left">
+          <img
+            src="/trekthehill.png"
+            style={{
+              height: '50px',
+            }}
+            alt="logo"
+          />
+        </div>
         <div className="center">
           <div className="link">
             <a href="#about">About</a>
@@ -130,7 +146,7 @@ export const Navbar = () => {
             <a href="#speakers">Speakers</a>
           </div>
           <div className="link">
-            <a href="#sponsers">Sponsors</a>
+            <a href="#sponsors">Sponsors</a>
           </div>
           <div className="link">
             <a href="#team">Team</a>
@@ -142,10 +158,7 @@ export const Navbar = () => {
             <a href="#faq">FAQ&apos;s</a>
           </div>
         </div>
-        <div className="right">
-          <div className="icons"></div>
-          <div className="icons"></div>
-        </div>
+        <div className="right"></div>
         <div
           className="toggleIcon "
           onClick={() => {
@@ -174,7 +187,7 @@ export const Navbar = () => {
 
           .left {
             width: 20%;
-            padding: 20px 20px;
+            padding: 10px;
           }
           .center {
             width: 60%;
@@ -211,6 +224,10 @@ export const Navbar = () => {
           }
 
           @media screen and (max-width: 767px) {
+            .left {
+              width: 100px;
+              padding: 10px;
+            }
             .toggleIcon {
               position: fixed;
               top: 10px;
