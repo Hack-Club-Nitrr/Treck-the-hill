@@ -6,27 +6,23 @@ import { About } from '../components/About';
 import { CyberJunkSocialMedia } from '../components/CyberJunkSocialMedia';
 import { Navbar } from '../components/Navbar';
 import { Timeline } from '../components/Timeline';
+import Teams from '../components/Teams';
+import Contact from '../components/Contact';
 import { Sponsers } from '../components/Sponsers';
+import Footer from '../components/Footer';
+import Speaker from '../components/Speaker';
+import FAQs from '../components/FAQ';
 export default function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
 
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
   };
-  const updateWidthAndHeight = () => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
-  };
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', updateWidthAndHeight);
-    updateWidthAndHeight();
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', updateWidthAndHeight);
     };
   }, []);
 
@@ -36,13 +32,28 @@ export default function Home() {
   const tree3Ref = useRef(null);
   const baseRef = useRef(null);
   const campRef = useRef(null);
-  // const starsRef = useRef(null);
   const mountRef = useRef(null);
 
   useEffect(() => {
-    bannerRef.current.style.transform = `translateY(${
-      -0.6 * scrollPosition
-    }px) scale(1)`;
+    if (scrollPosition > 1600) {
+      baseRef.current.style.display = 'none';
+      mountRef.current.style.display = 'none';
+      campRef.current.style.display = 'none';
+      tree1Ref.current.style.display = 'none';
+      tree2Ref.current.style.display = 'none';
+      tree3Ref.current.style.display = 'none';
+      return;
+    } else {
+      baseRef.current.style.display = 'block';
+      mountRef.current.style.display = 'block';
+      campRef.current.style.display = 'block';
+      tree1Ref.current.style.display = 'block';
+      tree2Ref.current.style.display = 'block';
+      tree3Ref.current.style.display = 'block';
+    }
+    // bannerRef.current.style.transform = `translateY(${
+    //   -0.6 * scrollPosition
+    // }px) scale(1)`;
     if (scrollPosition < 630) {
       tree1Ref.current.style.opacity = '1';
       tree1Ref.current.style.transform = `scale(2)`;
@@ -88,61 +99,37 @@ export default function Home() {
       baseRef.current.style.transform = `scale(1.5)`;
     } else {
       baseRef.current.style.opacity = `${2 - scrollPosition / 1100}`;
-      baseRef.current.style.transform = `scale(${2 + scrollPosition / 1100})`;
+      baseRef.current.style.transform = `scale(${1.5 + scrollPosition / 1100})`;
     }
-    if (scrollPosition < 500) {
-      // mountRef.current.style.opacity = '1';
-      // mountRef.current.style.transform = `scale(1)`;
-    } else {
-      // mountRef.current.style.opacity = `${0.8 - (scrollPosition - 500) / 1000}`;
-      // mountRef.current.style.transform = `scale(${
-      //   1 + (scrollPosition - 500) / 1000
-      // })`;
+    if (scrollPosition >= 500) {
       mountRef.current.style.transform = `translateY(${
         scrollPosition / 2 - 250
       }px)`;
+    } else {
+      mountRef.current.style.transform = `translateY(0px)`;
     }
-    // if(){
-
-    // }
-    // starsRef.current.style.opacity = `${scrollPosition / 1000}`;
-    // mountRef.current.style.transform = `translateX(${-0.5 * scrollPosition}px)`;
-    // campRef.current.style.transform = `translateX(${0.5 * scrollPosition}px)`;
   }, [scrollPosition]);
 
-  console.log(scrollPosition);
   return (
     <div className={styles.container}>
-      <Navbar />
       <Stars />
       <Head>
-        <title>Treck The Hill</title>
-        <meta name="description" content="Treck the Hill" />
+        <title>Trek The Hill</title>
+        <meta name="description" content="Trek the Hill" />
         <link rel="icon" href="/favicon.ico" />
+        <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
       </Head>
-      {/* <div className={styles.stars} ref={starsRef}>
-        <Image src="/nightSky.jpg" alt="stars" width={width} height={height} />
-      </div> */}
       <div className={styles.banner} ref={bannerRef}>
         <img src="/banner.png" alt="banner" />
+        <div className={styles.button_container}>
+          <div
+            className="apply-button"
+            data-hackathon-slug="trek-the-hill"
+            data-button-theme="light"
+            style={{ height: '34px', width: '212px', margin: '0px auto' }}
+          ></div>
+        </div>
       </div>
-      {/* <div className={styles.camp} ref={campRef}>
-        <Image
-          src="/tent2.png"
-          alt="camp"
-          width={0.2 * width}
-          height={0.3 * height}
-        />
-      </div>
-      <div className={styles.mount} ref={mountRef}>
-        <Image
-          src="/mountain.png"
-          alt="mountain"
-          width={0.4 * width}
-          height={0.65 * height}
-        />
-      </div> */}
-
       {/* clouds */}
       <svg height="347" width="168" id="cloud1" className={styles.cloud1}>
         <g>
@@ -389,10 +376,34 @@ export default function Home() {
       </div>
       <div style={{ height: '1800px' }} className="compensation"></div>
 
-      <About />
-      <CyberJunkSocialMedia />
-      <Timeline />
-      <Sponsers />
+      <div id="about">
+        <About />
+      </div>
+
+      <div id="speakers">
+        <Speaker />
+      </div>
+
+      <div id="events">
+        <Timeline />
+      </div>
+      <div id="sponsors">
+        <Sponsers />
+      </div>
+      <div id="social_media">
+        <CyberJunkSocialMedia />
+      </div>
+
+      <div id="team">
+        <Teams />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
+      <div id="faq">
+        <FAQs />
+      </div>
+      <Footer />
       <style jsx>
         {`
           .background {

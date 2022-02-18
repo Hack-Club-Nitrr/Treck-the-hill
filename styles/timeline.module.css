@@ -110,12 +110,14 @@
 
 .timeline_heading {
   font-size: 20px;
-  width: 35%;
+  width: fit-content;
   text-transform: uppercase;
-  background-color: #000;
+  background-color: rgba(255, 255, 255, 0.164);
+  backdrop-filter: blur(1px);
   color: #fff;
   display: flex;
   flex-direction: row-reverse;
+  border-right: 5px solid green;
 }
 
 .timeline_heading p {
@@ -134,18 +136,24 @@
 }
 
 .timeline_para {
-  font-size: clamp(7px, 3.8vh, 20px);
+  font-size: clamp(7px, 3.8vh, 16px);
 }
 
 .main_heading {
   font-size: clamp(15px, 7vh, 45px);
 }
-
+.timeline_image {
+  width: 80%;
+  margin: 0px auto;
+}
 @media screen and (max-width: 767px) {
   .timeline_item {
     width: 100%;
   }
-
+  .timeline_image {
+    width: 100%;
+    margin: 0px auto;
+  }
   .timeline_item:nth-child(even) .numberbar {
     flex-direction: row;
   }

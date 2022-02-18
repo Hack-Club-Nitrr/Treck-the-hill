@@ -8,10 +8,16 @@
 .banner {
   z-index: 2;
   transform: scale(1.2);
-  position: fixed;
-  top: -8%;
+  position: absolute;
+  top: -50px;
   left: 33.5%;
   width: 33%;
+  justify-content: center;
+}
+.button_container {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
 }
 .base {
   position: fixed;
@@ -88,9 +94,12 @@
 
 @media screen and (max-width: 767px) {
   .banner {
-    top: -5%;
-    left: 5%;
-    width: 90%;
+    top: -10px;
+    left: 10%;
+    width: 80%;
+  }
+  .button_container {
+    margin-top: 30px;
   }
   .camp {
     right: 15%;

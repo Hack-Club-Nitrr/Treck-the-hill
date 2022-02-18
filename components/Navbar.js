@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRef } from 'react';
-import { BiAlignLeft } from 'react-icons/bi';
-import { GiCrossedAxes } from 'react-icons/gi';
+import { BiMenuAltRight } from 'react-icons/bi';
+import { AiOutlineClose } from 'react-icons/ai';
 import { useEffect, useState } from 'react';
 
 export const Navbar = () => {
@@ -22,6 +22,14 @@ export const Navbar = () => {
     } else {
       topnav.current.style.backdropFilter = ' blur(10px)';
     }
+    const script = document.createElement('script');
+    script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
   }, [scrollPosition]);
   const momenu = useRef(null);
 
@@ -43,47 +51,135 @@ export const Navbar = () => {
             closeMenu();
           }}
         >
-          <GiCrossedAxes size={40} />
+          <AiOutlineClose size={40} />
         </div>
-        <div className="mo_link">home</div>
-        <div className="mo_link">pages</div>
-        <div className="mo_link">portfolio</div>
-        <div className="mo_link">headers</div>
-        <div className="mo_link">elements</div>
-        <div className="mo_link">blog</div>
-      </div>
-      <div className="topnav" id="topnav" ref={topnav}>
-        <div className="left"></div>
-        <div className="center">
-          <div className="link">home</div>
-          <div className="link">pages</div>
-          <div className="link">portfolios</div>
-          <div className="link">headers</div>
-          <div className="link">elements</div>
-          <div className="link">blog</div>
-        </div>
-        <div className="right">
-          <div className="icons"></div>
-          <div className="icons"></div>
-          <div
-            className="icons toggleIcon "
+        <div className="mo_link">
+          <a
+            href="#about"
             onClick={() => {
-              showMenu();
+              closeMenu();
             }}
           >
-            <BiAlignLeft size={50} color="white" />
+            About
+          </a>
+        </div>
+        <div className="mo_link">
+          <a
+            href="#events"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
+            Events
+          </a>
+        </div>
+        <div className="mo_link">
+          <a
+            href="#speakers"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
+            Speakers
+          </a>
+        </div>
+        <div className="mo_link">
+          <a
+            href="#sponsors"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
+            Sponsors
+          </a>
+        </div>
+
+        <div className="mo_link">
+          <a
+            href="#team"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
+            Team
+          </a>
+        </div>
+        <div className="mo_link">
+          <a
+            href="#contact"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
+            Contact
+          </a>
+        </div>
+        <div className="mo_link">
+          <a
+            href="#faq"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
+            FAQ&apos;s
+          </a>
+        </div>
+      </div>
+      <div className="topnav" id="topnav" ref={topnav}>
+        <div className="left">
+          <img
+            src="/trekthehill.png"
+            style={{
+              height: '50px',
+            }}
+            alt="logo"
+          />
+        </div>
+        <div className="center">
+          <div className="link">
+            <a href="#about">About</a>
           </div>
+          <div className="link">
+            <a href="#events">Events</a>
+          </div>
+          <div className="link">
+            <a href="#speakers">Speakers</a>
+          </div>
+          <div className="link">
+            <a href="#sponsors">Sponsors</a>
+          </div>
+          <div className="link">
+            <a href="#team">Team</a>
+          </div>
+          <div className="link">
+            <a href="#contact">Contact</a>
+          </div>
+          <div className="link">
+            <a href="#faq">FAQ&apos;s</a>
+          </div>
+        </div>
+        <div className="right"></div>
+        <div
+          className="toggleIcon "
+          onClick={() => {
+            showMenu();
+          }}
+        >
+          <BiMenuAltRight size={50} color="white" />
         </div>
       </div>
 
       <style jsx>
         {`
+          @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
           .topnav {
             position: fixed;
             top: 0;
             left: 0;
             display: flex;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Comfortaa', cursive;
             z-index: 100;
             width: 100%;
             transition: 0.4s ease-out;
@@ -91,13 +187,13 @@ export const Navbar = () => {
 
           .left {
             width: 20%;
-            padding: 20px 20px;
+            padding: 10px;
           }
           .center {
             width: 60%;
             display: flex;
             justify-content: space-around;
-            text-transform: uppercase;
+
             font-weight: 700;
             padding: 20px 20px;
             color: rgb(37, 37, 37);
@@ -117,7 +213,7 @@ export const Navbar = () => {
           .link:hover {
             border-bottom: #4dff00;
             margin-top: -2px;
-            color: rgb(160, 200, 89);
+            color: rgb(26 188 156);
           }
           .icons {
             padding: 0px 15px;
@@ -128,6 +224,18 @@ export const Navbar = () => {
           }
 
           @media screen and (max-width: 767px) {
+            .left {
+              width: 100px;
+              padding: 10px;
+            }
+            .toggleIcon {
+              position: fixed;
+              top: 10px;
+              right: 10px;
+            }
+            .topnav {
+              backdrop-filter: none !important;
+            }
             .number {
               font-size: 90px;
               font-weight: 900;
@@ -149,21 +257,6 @@ export const Navbar = () => {
               text-shadow: 2px 2px 8px #ae00ff94;
             }
 
-            .herodesc {
-              color: rgb(255, 0, 0);
-              backdrop-filter: blur(2px);
-              font-weight: 600;
-              display: none;
-            }
-
-            .herobtn {
-              position: absolute;
-              left: 10%;
-              bottom: -140px;
-              padding: 10px 40px;
-              margin: 40px auto;
-              float: right;
-            }
             .center {
               display: none;
             }
@@ -177,7 +270,8 @@ export const Navbar = () => {
               position: fixed;
               top: 0;
               left: 0;
-              background: black;
+              backdrop-filter: blur(12px);
+              background: rgba(0, 1, 53, 0.253);
               width: 100%;
               height: 100%;
               padding-top: 70px;
@@ -197,7 +291,7 @@ export const Navbar = () => {
               padding: 10px 20px;
               font-size: 20px;
               text-transform: capitalize;
-              border-bottom: 1px solid rgb(51, 51, 51);
+              // border-bottom: 1px solid rgba(0, 1, 153);
             }
           }
 
