@@ -124,7 +124,7 @@ export default function Home() {
         <div className={styles.button_container}>
           <div
             className="apply-button"
-            data-hackathon-slug="https://apply.devfolio.co/v2/button?hackathonSlug=trek-the-hill&buttonTheme=light"
+            data-hackathon-slug="trek-the-hill"
             data-button-theme="light"
             style={{ height: '34px', width: '212px', margin: '0px auto' }}
           ></div>
