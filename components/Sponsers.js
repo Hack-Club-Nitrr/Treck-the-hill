@@ -54,7 +54,7 @@ export const Sponsers = () => {
         {diamond.map((sponser, ind) => {
           return (
             <div className={styles.diamond} key={sponser.name}>
-              <a href={sponser.link}>
+              <a target="_blank" rel="noreferrer" href={sponser.link}>
                 <img src={sponser.image} alt={sponser.name} />
                 {/* <div className={styles.spons_name}>{sponser.name}</div> */}
               </a>
@@ -67,7 +67,9 @@ export const Sponsers = () => {
         {platinum.map((sponser) => {
           return (
             <div className={styles.platinum} key={sponser.name}>
-              <img src={sponser.image} alt={sponser.name} />
+              <a target="_blank" rel="noreferrer" href={sponser.link}>
+                <img src={sponser.image} alt={sponser.name} />
+              </a>
             </div>
           );
         })}
@@ -76,7 +78,9 @@ export const Sponsers = () => {
         {gold.map((sponser) => {
           return (
             <div className={styles.gold} key={sponser.name}>
-              <img src={sponser.image} alt={sponser.name} />
+              <a target="_blank" rel="noreferrer" href={sponser.link}>
+                <img src={sponser.image} alt={sponser.name} />
+              </a>
             </div>
           );
         })}
@@ -85,7 +89,9 @@ export const Sponsers = () => {
         {silver.map((sponser) => {
           return (
             <div className={styles.silver} key={sponser.name}>
-              <img src={sponser.image} alt={sponser.name} />
+              <a target="_blank" rel="noreferrer" href={sponser.link}>
+                <img src={sponser.image} alt={sponser.name} />
+              </a>
             </div>
           );
         })}
@@ -94,7 +100,9 @@ export const Sponsers = () => {
         {bronze.map((sponser) => {
           return (
             <div className={styles.bronze} key={sponser.name}>
-              <img src={sponser.image} alt={sponser.name} />
+              <a target="_blank" rel="noreferrer" href={sponser.link}>
+                <img src={sponser.image} alt={sponser.name} />
+              </a>
             </div>
           );
         })}
