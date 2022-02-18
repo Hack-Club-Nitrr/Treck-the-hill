@@ -6,12 +6,18 @@
   height: fit-content;
 }
 .banner {
-  z-index: 2;
+  z-index: 200;
   transform: scale(1.2);
-  position: fixed;
-  top: -8%;
+  position: absolute;
+  top: -50px;
   left: 33.5%;
   width: 33%;
+  justify-content: center;
+}
+.button_container {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
 }
 .base {
   position: fixed;
@@ -91,6 +97,9 @@
     top: -5%;
     left: 5%;
     width: 90%;
+  }
+  .button_container {
+    margin-top: 30px;
   }
   .camp {
     right: 15%;
