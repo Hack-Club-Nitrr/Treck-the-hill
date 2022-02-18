@@ -6,7 +6,7 @@
   height: fit-content;
 }
 .banner {
-  z-index: 200;
+  z-index: 2;
   transform: scale(1.2);
   position: absolute;
   top: -50px;
