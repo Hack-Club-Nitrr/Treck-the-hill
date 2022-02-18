@@ -26,30 +26,25 @@
 }
 .diamond,
 .diamond img {
-  height: 200px;
   width: 300px;
   margin-right: 0 !important;
 }
 
 .platinum,
 .platinum img {
-  height: 160px;
   width: 160px;
 }
 
 .gold,
 .gold img {
-  height: 140px;
   width: 140px;
 }
 .silver,
 .silver img {
-  height: 120px;
   width: 120px;
 }
 .bronze,
 .bronze img {
-  height: 100px;
   width: 100px;
 }
 .spons_container {
