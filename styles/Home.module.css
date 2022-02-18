@@ -94,9 +94,9 @@
 
 @media screen and (max-width: 767px) {
   .banner {
-    top: -5%;
-    left: 5%;
-    width: 90%;
+    top: -10px;
+    left: 10%;
+    width: 80%;
   }
   .button_container {
     margin-top: 30px;
