@@ -28,24 +28,29 @@
 .diamond img {
   width: 300px;
   margin-right: 0 !important;
+  margin: 20px auto;
 }
 
 .platinum,
 .platinum img {
   width: 160px;
+  margin: 20px auto;
 }
 
 .gold,
 .gold img {
   width: 140px;
+  margin: 20px auto;
 }
 .silver,
 .silver img {
   width: 120px;
+  margin: 20px auto;
 }
 .bronze,
 .bronze img {
   width: 100px;
+  margin: 20px auto;
 }
 .spons_container {
   display: grid;
