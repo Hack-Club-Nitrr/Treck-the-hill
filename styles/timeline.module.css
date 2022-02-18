@@ -64,6 +64,7 @@
 
 /* Timeline container */
 .timeline_container {
+  backdrop-filter: blur(1px);
   margin: 50px;
   padding-top: 20px;
   display: flex;
@@ -183,5 +184,8 @@
     border-left-width: 5px;
     border-left-style: solid;
     border-right: unset !important;
+  }
+  .timeline_container {
+    margin: 50px 10px;
   }
 }
