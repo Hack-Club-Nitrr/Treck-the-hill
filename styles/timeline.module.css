@@ -65,7 +65,7 @@
 /* Timeline container */
 .timeline_container {
   backdrop-filter: blur(1px);
-  margin: 50px;
+  margin: 50px 100px;
   padding-top: 20px;
   display: flex;
   flex-direction: column;
@@ -122,7 +122,7 @@
 }
 
 .timeline_heading p {
-  font-size: clamp(10px, 4vh, 30px);
+  font-size: clamp(7px, 3.8vh, 16px);
   padding: 5px;
   letter-spacing: 1.5px;
   margin: 0 10px 0 0;
@@ -138,8 +138,30 @@
 
 .timeline_para {
   font-size: clamp(7px, 3.8vh, 16px);
+  text-align: justify;
+  width: 100%;
 }
 
+.temp_timeline_para {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.btn_container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.readmore {
+  color: rgb(26 188 156);
+  text-shadow: 0 0 10px rgb(26 188 156);
+  transition: 0.2s;
+}
+.readmore:hover {
+  text-shadow: 0 20px 20px rgb(26 188 156);
+
+  transform: translateY(-2px);
+}
 .main_heading {
   font-size: clamp(15px, 7vh, 45px);
 }
