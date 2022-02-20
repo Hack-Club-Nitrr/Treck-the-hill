@@ -12,6 +12,7 @@ export const Sponsers = () => {
   const [gold, setGold] = useState([]);
   const [platinum, setPlatinum] = useState([]);
   const [bronze, setBronze] = useState([]);
+  const [community, setCommunity] = useState([]);
 
   useEffect(() => {
     axios
@@ -32,12 +33,17 @@ export const Sponsers = () => {
         var bronze = response.data.filter(
           (category) => category.category === 'bronze'
         );
+        var community = response.data.filter(
+          (category) => category.category === 'community_partner'
+        );
+        console.log(response);
         setSponsers(response.data);
         setDiamond(diamond);
         setPlatinum(platinum);
         setSilver(silver);
         setGold(gold);
         setBronze(bronze);
+        setCommunity(community);
       })
       .catch((error) => {});
   }, []);
@@ -98,6 +104,22 @@ export const Sponsers = () => {
       </div>
       <div className={styles.spons_container}>
         {bronze.map((sponser) => {
+          return (
+            <div className={styles.bronze} key={sponser.name}>
+              <a target="_blank" rel="noreferrer" href={sponser.link}>
+                <img src={sponser.image} alt={sponser.name} />
+              </a>
+            </div>
+          );
+        })}
+      </div>
+      <br />
+      <div className={styles.heading}>
+        <p>Community Partners</p>
+        <br />
+      </div>
+      <div className={styles.spons_container}>
+        {community.map((sponser) => {
           return (
             <div className={styles.bronze} key={sponser.name}>
               <a target="_blank" rel="noreferrer" href={sponser.link}>
