@@ -180,7 +180,7 @@ export const Navbar = () => {
             left: 0;
             display: flex;
             font-family: 'Comfortaa', cursive;
-            z-index: 100;
+            z-index: 1001;
             width: 100%;
             transition: 0.4s ease-out;
           }
