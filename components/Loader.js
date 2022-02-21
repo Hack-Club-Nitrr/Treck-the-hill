@@ -28,7 +28,7 @@ const SVG = () => {
 
 function Loader() {
   return (
-    <Center width={'100%'} height={'100vh'} bg={'black'}>
+    <Center width={'100%'} height={'100vh'} bg={'#142f46'}>
       <SVG />
     </Center>
   );

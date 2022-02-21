@@ -60,6 +60,11 @@ const FAQ_DATA = [
     answer:
       "We apologize, but all the hackathon's projects should be developed during the event from scratch. All hackers will be strictly monitored for any kind of plagiarism or cheating.",
   },
+  {
+    id: 6,
+    question: 'Do I need expreience?',
+    answer: 'No experience is necessary. We will have plenty of mentors and resources available, along with several workshops targeted for beginners. Come learn and experience your first hackathon at Trek The Hill!'
+  }
 ];
 
 const FAQItem = ({ question, answer }) => (
