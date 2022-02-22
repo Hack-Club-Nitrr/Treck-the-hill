@@ -26,7 +26,7 @@ export default function Footer() {
       </Box>
       <Flex m={10} justifyContent={'center'}>
         <HStack color={'black'}>
-          <Link href="https://discord.gg/vdJX7j7N" target="_blank">
+          <Link href="https://discord.gg/a8UFxSBFtP" target="_blank">
             <IconButton
               rounded="full"
               aria-label="Discord"
