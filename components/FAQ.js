@@ -29,7 +29,7 @@ const FAQ_DATA = [
     answer: (
       <>
         Yes! keeping overall fairness and productivity in mind, participants
-        will be required to have teams of <b>EXACTLY 4 people</b>.
+        will be required to have teams of <b>ATMOST 4 people</b>.
       </>
     ),
   },
