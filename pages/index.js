@@ -10,6 +10,7 @@ import Teams from '../components/Teams';
 import Contact from '../components/Contact';
 import { Sponsers } from '../components/Sponsers';
 import Footer from '../components/Footer';
+import  PrizeSection  from '../components/PrizeSection';
 import Speaker from '../components/Speaker';
 import FAQs from '../components/FAQ';
 export default function Home() {
@@ -380,6 +381,10 @@ export default function Home() {
         <About />
       </div>
 
+      <div id="PrizeSection">
+        <PrizeSection />
+      </div>
+
       <div id="speakers">
         <Speaker />
       </div>
@@ -387,6 +392,9 @@ export default function Home() {
       <div id="events">
         <Timeline />
       </div>
+
+      
+
       <div id="sponsors">
         <Sponsers />
       </div>
