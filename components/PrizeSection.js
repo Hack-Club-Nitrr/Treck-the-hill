@@ -46,7 +46,7 @@ const prizeData = [  //no api for it, this is what it is
 const BasicPrizes = (props) => {
   const listDetails = props.data.goodies.map((element) => {
     return (
-      <li>
+      <li key={Math.random()}>
         <span className="list-name">{element}</span>
          </li>
     )
@@ -93,7 +93,7 @@ const BasicPrizes = (props) => {
 const PremiumPrizes = (props) => {
   const listDetails = props.data.goodies.map((element) => {
     return (
-      <li>
+      <li  key={Math.random()}>
         <span className="list-name">{element}</span>
       </li>
     )
@@ -141,7 +141,7 @@ const PremiumPrizes = (props) => {
 const UltimatePrizes = (props) => {
   const listDetails = props.data.goodies.map((element) => {
     return (
-      <li>
+      <li  key={Math.random()}>
         <span className="list-name">{element}</span>
          </li>
     )
@@ -188,12 +188,12 @@ const UltimatePrizes = (props) => {
 const PrizeSection = () => {
   const pricelist = prizeData.map((prize) => {
     if (prize.type == 'premium') return( 
-      <Tilt className="tilt">
+      <Tilt className="tilt"  key={Math.random()}>
       <PremiumPrizes data={prize} /></Tilt>
      )
-    if (prize.type == 'ultimate') return(<Tilt className="tilt"><UltimatePrizes data={prize} /></Tilt>
+    if (prize.type == 'ultimate') return(<Tilt className="tilt"  key={Math.random()}><UltimatePrizes data={prize} /></Tilt>
       )
-    if (prize.type == 'general') return( <Tilt className="tilt"><BasicPrizes data={prize} /></Tilt>
+    if (prize.type == 'general') return( <Tilt className="tilt"  key={Math.random()}><BasicPrizes data={prize} /></Tilt>
      )
   })
   return (
