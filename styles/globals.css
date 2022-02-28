@@ -60,6 +60,8 @@ a {
   justify-content: space-between;
   flex-direction: row;
   font-family: 'Comfortaa', cursive;
+  letter-spacing: 1px;
+  font-size: medium;
 }
 
 .wrapper .table {
@@ -174,7 +176,7 @@ a {
   font-size: 17px;
   font-weight: 400;
   text-align: center;
-  font-size: 0.8rem;
+  
 }
 
 .features li .icon {
