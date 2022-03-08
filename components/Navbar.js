@@ -85,6 +85,16 @@ export const Navbar = () => {
         </div>
         <div className="mo_link">
           <a
+            href="#judges"
+            onClick={() => {
+              closeMenu();
+            }}
+          >
+            Judges
+          </a>
+        </div>
+        <div className="mo_link">
+          <a
             href="#sponsors"
             onClick={() => {
               closeMenu();
@@ -144,6 +154,9 @@ export const Navbar = () => {
           </div>
           <div className="link">
             <a href="#speakers">Speakers</a>
+          </div>
+          <div className="link">
+            <a href="#judges">Judges</a>
           </div>
           <div className="link">
             <a href="#sponsors">Sponsors</a>
