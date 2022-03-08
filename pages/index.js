@@ -51,9 +51,9 @@ export default function Home() {
       tree2Ref.current.style.display = 'block';
       tree3Ref.current.style.display = 'block';
     }
-    bannerRef.current.style.transform = `translateY(${
-      -0.6 * scrollPosition
-    }px) scale(1)`;
+    // bannerRef.current.style.transform = `translateY(${
+    //   -0.6 * scrollPosition
+    // }px) scale(1)`;
     if (scrollPosition < 630) {
       tree1Ref.current.style.opacity = '1';
       tree1Ref.current.style.transform = `scale(2)`;
@@ -117,9 +117,18 @@ export default function Home() {
         <title>Trek The Hill</title>
         <meta name="description" content="Trek the Hill" />
         <link rel="icon" href="/favicon.ico" />
+        <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
       </Head>
       <div className={styles.banner} ref={bannerRef}>
         <img src="/banner.png" alt="banner" />
+        <div className={styles.button_container}>
+          <div
+            className="apply-button"
+            data-hackathon-slug="trek-the-hill"
+            data-button-theme="light"
+            style={{ height: '34px', width: '212px', margin: '0px auto' }}
+          ></div>
+        </div>
       </div>
       {/* clouds */}
       <svg height="347" width="168" id="cloud1" className={styles.cloud1}>
@@ -378,7 +387,7 @@ export default function Home() {
       <div id="events">
         <Timeline />
       </div>
-      <div id="sponsers">
+      <div id="sponsors">
         <Sponsers />
       </div>
       <div id="social_media">

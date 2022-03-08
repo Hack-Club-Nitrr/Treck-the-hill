@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { SimpleGrid, Box } from '@chakra-ui/react';
+import { FiDownload } from 'react-icons/fi';
 import styles from '../styles/sponsers.module.css';
 
 export const Sponsers = () => {
@@ -11,6 +12,7 @@ export const Sponsers = () => {
   const [gold, setGold] = useState([]);
   const [platinum, setPlatinum] = useState([]);
   const [bronze, setBronze] = useState([]);
+  const [community, setCommunity] = useState([]);
 
   useEffect(() => {
     axios
@@ -31,12 +33,17 @@ export const Sponsers = () => {
         var bronze = response.data.filter(
           (category) => category.category === 'bronze'
         );
+        var community = response.data.filter(
+          (category) => category.category === 'community_partner'
+        );
+        console.log(response);
         setSponsers(response.data);
         setDiamond(diamond);
         setPlatinum(platinum);
         setSilver(silver);
         setGold(gold);
         setBronze(bronze);
+        setCommunity(community);
       })
       .catch((error) => {});
   }, []);
@@ -53,7 +60,7 @@ export const Sponsers = () => {
         {diamond.map((sponser, ind) => {
           return (
             <div className={styles.diamond} key={sponser.name}>
-              <a href={sponser.link}>
+              <a target="_blank" rel="noreferrer" href={sponser.link}>
                 <img src={sponser.image} alt={sponser.name} />
                 {/* <div className={styles.spons_name}>{sponser.name}</div> */}
               </a>
@@ -66,7 +73,9 @@ export const Sponsers = () => {
         {platinum.map((sponser) => {
           return (
             <div className={styles.platinum} key={sponser.name}>
-              <img src={sponser.image} alt={sponser.name} />
+              <a target="_blank" rel="noreferrer" href={sponser.link}>
+                <img src={sponser.image} alt={sponser.name} />
+              </a>
             </div>
           );
         })}
@@ -75,7 +84,9 @@ export const Sponsers = () => {
         {gold.map((sponser) => {
           return (
             <div className={styles.gold} key={sponser.name}>
-              <img src={sponser.image} alt={sponser.name} />
+              <a target="_blank" rel="noreferrer" href={sponser.link}>
+                <img src={sponser.image} alt={sponser.name} />
+              </a>
             </div>
           );
         })}
@@ -84,7 +95,9 @@ export const Sponsers = () => {
         {silver.map((sponser) => {
           return (
             <div className={styles.silver} key={sponser.name}>
-              <img src={sponser.image} alt={sponser.name} />
+              <a target="_blank" rel="noreferrer" href={sponser.link}>
+                <img src={sponser.image} alt={sponser.name} />
+              </a>
             </div>
           );
         })}
@@ -93,10 +106,40 @@ export const Sponsers = () => {
         {bronze.map((sponser) => {
           return (
             <div className={styles.bronze} key={sponser.name}>
-              <img src={sponser.image} alt={sponser.name} />
+              <a target="_blank" rel="noreferrer" href={sponser.link}>
+                <img src={sponser.image} alt={sponser.name} />
+              </a>
             </div>
           );
         })}
+      </div>
+      <br />
+      <div className={styles.heading}>
+        <p>Community Partners</p>
+        <br />
+      </div>
+      <div className={styles.spons_container}>
+        {community.map((sponser) => {
+          return (
+            <div className={styles.bronze} key={sponser.name}>
+              <a target="_blank" rel="noreferrer" href={sponser.link}>
+                <img src={sponser.image} alt={sponser.name} />
+              </a>
+            </div>
+          );
+        })}
+      </div>
+      <div className={styles.btn_container}>
+        <h4>Click here to download our Sponsorship Brochure</h4>
+        <button className={styles.btn}>
+          <a
+            href="https://drive.google.com/file/d/17nr2ZE9PIsTD7w2yxUtr6fydVf1vDE4Y/view"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FiDownload styles={{ marginTop: '7px' }} />
+          </a>
+        </button>
       </div>
     </div>
   );

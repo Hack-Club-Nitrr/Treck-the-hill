@@ -15,11 +15,20 @@ export const About = () => {
               <br />
               <p>
                 “Trek the hill 2022” brings an adventurous journey of 15 days
-                through its bootcamp where beginners can acquire ideas on how to
-                get started, providing access to learning materials, present
-                their unique ideas and abilities, and push their limits with
-                creativity and proficiency. We strive to make it a fun,
-                informative, and instructive experience.
+                through its{' '}
+                <b
+                  style={{
+                    color: 'rgb(26 188 156)',
+                    textShadow: '0 0 10px rgb(26 188 156)',
+                  }}
+                >
+                  bootcamp + 48 hour hackathon
+                </b>{' '}
+                where beginners can acquire ideas on how to get started,
+                providing access to learning materials, present their unique
+                ideas and abilities, and push their limits with creativity and
+                proficiency. We strive to make it a fun, informative, and
+                instructive experience.
               </p>
               <br />
               <p>
