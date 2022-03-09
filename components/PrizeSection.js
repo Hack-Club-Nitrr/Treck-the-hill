@@ -5,41 +5,40 @@ import Tilt from 'react-parallax-tilt';
 const prizeData = [  //no api for it, this is what it is
   {
     type: 'premium',
-    name: 'First prize',
-    rank: 1,
+    name: 'Second prize',
+    rank: `3000₹`,
     price: 29,
-    goodies: [
-      '1st place in the event get 2000$',
-      '1st place in the event get 2000$',
-      '1st place in the event get 2000$',
-      '1st place in the event get 2000$'
-    ]
+    goodies: []
   },
   {
     type: 'ultimate',
-    name: 'Second prize',
-    rank: 2,
+    name: 'First prize',
+    rank: `5000₹`,
     price: 29,
-    goodies: [
-      '1st place in the event get 2000$',
-      '1st place in the event get 2000$',
-      '1st place in the event get 2000$',
-      '1st place in the event get 2000$'
-    ]
+    goodies: []
   },
   {
     type: 'general',
     name: 'Third prize',
-    rank: 3,
+    rank: `5000₹`,
     price: 29,
-    goodies: [
-      '1st place in the event get 2000$',
-      '1st place in the event get 2000$',
-      '1st place in the event get 2000$',
-      '1st place in the event get 2000$'
-    ]
+    goodies: []
   }
+  ,
+  
 ]
+
+const details = {
+  name: 'Other Details',
+  type: 'ultimate',
+
+  goodies:[
+    'saf e re egrsgsrh ersthshrt',
+    'saf e re egrsgsrh ersthshrt',
+    'saf e re egrsgsrh ersthshrt',
+    'saf e re egrsgsrh ersthshrt'
+  ]}
+
 
 
 
@@ -100,7 +99,6 @@ const PremiumPrizes = (props) => {
   })
   return (
     <div className="table premium">
-      <div className="ribbon"><span>we wish to see you here!</span></div>
       <div className="price-section">
           <Tilt
           
@@ -185,15 +183,36 @@ const UltimatePrizes = (props) => {
   )
 }
 
+const Details = (props) => {
+  const listDetails = props.data.goodies.map((element) => {
+    return (
+      <li  key={Math.random()}>
+        <span className="list-name">{element}</span>
+         </li>
+    )
+  })
+  return (
+    <div className="table ultimate">
+      <div className="package-name"><div className="centerTextPrizeSection">{`   ${props.data.name}   `}</div></div>
+      <ul className="features">
+        {listDetails}
+      </ul>
+
+    </div>
+  )
+}
+
+
+
 const PrizeSection = () => {
   const pricelist = prizeData.map((prize) => {
     if (prize.type == 'premium') return( 
-      <Tilt className="tilt"  key={Math.random()}>
-      <PremiumPrizes data={prize} /></Tilt>
+      
+      <PremiumPrizes key={Math.random()} data={prize} />
      )
-    if (prize.type == 'ultimate') return(<Tilt className="tilt"  key={Math.random()}><UltimatePrizes data={prize} /></Tilt>
+    if (prize.type == 'ultimate') return(<UltimatePrizes key={Math.random()}  data={prize} />
       )
-    if (prize.type == 'general') return( <Tilt className="tilt"  key={Math.random()}><BasicPrizes data={prize} /></Tilt>
+    if (prize.type == 'general') return( <BasicPrizes  key={Math.random()} data={prize} />
      )
   })
   return (
@@ -205,6 +224,8 @@ const PrizeSection = () => {
         {pricelist}
         
       </div>
+      <div className="wrapper">
+      <Details  key={Math.random()} data={details} /></div>
     </div>
   )
 }
