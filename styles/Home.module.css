@@ -6,7 +6,7 @@
   height: fit-content;
 }
 .banner {
-  z-index: 1000;
+  z-index: 4;
   transform: scale(1.2);
   position: absolute;
   top: -50px;
@@ -18,12 +18,13 @@
   display: flex;
   justify-content: center;
   margin-top: -20px;
-  z-index: 1000;
+  z-index: 4;
 }
 .base {
   position: fixed;
   bottom: 0px;
   z-index: 2;
+  pointer-events: none;
 }
 .stars {
   position: fixed;
@@ -31,6 +32,7 @@
   left: 0px;
   z-index: 1;
   opacity: 0;
+  pointer-events: none;
 }
 
 .camp {
@@ -39,12 +41,14 @@
   width: 25%;
   right: 37.5%;
   bottom: 0px;
+  pointer-events: none;
 }
 .mount {
   z-index: 1;
   position: fixed;
   bottom: 0px;
   left: 0%;
+  pointer-events: none;
 }
 .trees1,
 .trees2,
@@ -53,6 +57,7 @@
   position: fixed;
   bottom: 0px;
   z-index: 2;
+  pointer-events: none;
 }
 .trees1 {
   left: -5%;
@@ -71,11 +76,13 @@
   bottom: -53%;
   z-index: 1;
   left: -8%;
+  pointer-events: none;
 }
 .cloud1 {
   top: 20%;
   right: 10%;
   position: fixed;
+  pointer-events: none;
   animation: bounce 2s ease-in-out 0s infinite alternate;
 }
 @keyframes bounce {
@@ -90,6 +97,7 @@
   top: 20%;
   left: 10%;
   position: fixed;
+  pointer-events: none;
   animation: bounce 3.5s ease-in-out 2s infinite alternate;
 }
 

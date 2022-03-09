@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
 .footer {
   position: relative;
   color: white;
@@ -20,8 +21,9 @@
   justify-content: center;
   text-align: center;
   color: white;
-  font-size: 26px;
-  font-family: 'Press Start 2P', cursive;
+  font-size: 36px;
+  font-family: 'Rye', cursive;
+  word-spacing: 20px;
   line-height: 60px;
   vertical-align: middle;
   padding: 20px;
@@ -67,8 +69,8 @@
     justify-content: center;
     text-align: center;
     color: white;
-    font-size: 26px;
-    font-family: 'Press Start 2P', cursive;
+    word-spacing:10px;
+    font-family: 'Rye', cursive;
     line-height: 60px;
     padding: 20px;
   }

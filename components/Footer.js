@@ -15,14 +15,18 @@ export default function Footer() {
   return (
     <Box className={styles.footer}>
       <Box className={styles.tth}>
-        <Link href="https://www.trekthehill.co/" target={'_blank'}>
+        <Link
+          href="https://www.trekthehill.co/"
+          target={'_blank'}
+          style={{ marginRight: '20px' }}
+        >
           <Img src="/trekthehill.png" alt="logo" />
         </Link>
         <Text as={'h2'}>Trek The Hill 2022</Text>
       </Box>
       <Flex m={10} justifyContent={'center'}>
         <HStack color={'black'}>
-          <Link href="https://discord.gg/vdJX7j7N" target="_blank">
+          <Link href="https://discord.gg/a8UFxSBFtP" target="_blank">
             <IconButton
               rounded="full"
               aria-label="Discord"
