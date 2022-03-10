@@ -149,6 +149,7 @@ export const Navbar = () => {
           <div className="link">
             <a href="#about">About</a>
           </div>
+
           <div className="link">
             <a href="#events">Events</a>
           </div>
