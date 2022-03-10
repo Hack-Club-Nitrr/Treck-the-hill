@@ -7,21 +7,21 @@ const prizeData = [
     name: '₹5000',
     rank: `/first.png`,
     price: 29,
-    goodies: [],
+    goodies: ['₹8000 GfG Coupon + Goodies'],
   },
   {
     type: 'ultimate',
     name: '₹3000',
     rank: `/second.png`,
     price: 29,
-    goodies: [],
+    goodies: ['₹4800 GfG Coupon + Goodies'],
   },
   {
     type: 'general',
     name: '₹2000',
     rank: `/third.png`,
     price: 29,
-    goodies: [],
+    goodies: ['₹3600 GfG Coupon + Goodies'],
   },
 ];
 
@@ -32,16 +32,18 @@ const details = {
   goodies: [
     '1 Year Subscription of Wolfram|One and Wolfram|Alpha worth ₹28,000 to all the members of Top-3 teams.',
     '1 IoT Kit worth ₹2600 to each winning team (not to each member*) alongwith a surprise gift.',
-    'A total of ₹1,50,000 in credits to the winning team(s) - these can be distributed only in sums of $100, $125, and $250, per winning team.',
+    'A total of ₹1,50,000 in credits to the winning team(s) - these can be distributed only in sums of $100, $125, and $250, per winning team by Digital Ocean.',
   ],
 };
 
 const BasicPrizes = (props) => {
   const listDetails = props.data.goodies.map((element) => {
     return (
-      <li key={Math.random()}>
-        <span className="list-name">{element}</span>
-      </li>
+      <div key={Math.random()}>
+        <p className="list-name" style={{ textAlign: 'center' }}>
+          {element}
+        </p>
+      </div>
     );
   });
   return (
@@ -86,9 +88,11 @@ const BasicPrizes = (props) => {
 const PremiumPrizes = (props) => {
   const listDetails = props.data.goodies.map((element) => {
     return (
-      <li key={Math.random()}>
-        <span className="list-name">{element}</span>
-      </li>
+      <div key={Math.random()}>
+        <p className="list-name" style={{ textAlign: 'center' }}>
+          {element}
+        </p>
+      </div>
     );
   });
   return (
@@ -133,9 +137,11 @@ const PremiumPrizes = (props) => {
 const UltimatePrizes = (props) => {
   const listDetails = props.data.goodies.map((element) => {
     return (
-      <li key={Math.random()}>
-        <span className="list-name">{element}</span>
-      </li>
+      <div key={Math.random()}>
+        <p className="list-name" style={{ textAlign: 'center' }}>
+          {element}
+        </p>
+      </div>
     );
   });
   return (

@@ -54,7 +54,7 @@ a {
 
 .wrapper {
   width: 100%;
-  margin: auto;
+  margin: 10px auto;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -337,7 +337,7 @@ a {
 .other_prizes {
   width: 80% !important;
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 0px auto;
   padding: 30px;
   box-shadow: 0 5px 30px rgb(255 174 243 / 26%);
   border-radius: 1rem;
