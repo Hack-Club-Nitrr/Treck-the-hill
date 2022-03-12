@@ -4,21 +4,21 @@ import { BsCheck2Square } from 'react-icons/bs';
 const prizeData = [
   {
     type: 'premium',
-    name: '₹5000',
+    name: '₹2500',
     rank: `/first.png`,
     price: 29,
     goodies: ['₹8000 GfG Coupon + Goodies'],
   },
   {
     type: 'ultimate',
-    name: '₹3000',
+    name: '₹1500',
     rank: `/second.png`,
     price: 29,
     goodies: ['₹4800 GfG Coupon + Goodies'],
   },
   {
     type: 'general',
-    name: '₹2000',
+    name: '₹1000',
     rank: `/third.png`,
     price: 29,
     goodies: ['₹3600 GfG Coupon + Goodies'],
